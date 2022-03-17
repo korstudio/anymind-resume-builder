@@ -1,0 +1,22 @@
+# platform :ios, '10.0'
+
+target 'ResumeBuilder' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  pod 'SkeletonView'
+  pod 'RealmSwift', '~>10'
+
+  target 'ResumeBuilderTests' do
+    inherit! :search_paths
+
+    pod 'Quick'
+    pod 'Nimble'
+    # Pods for testing
+  end
+
+  target 'ResumeBuilderUITests' do
+    # Pods for testing
+  end
+
+end
