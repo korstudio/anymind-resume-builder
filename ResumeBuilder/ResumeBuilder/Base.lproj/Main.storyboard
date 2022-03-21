@@ -70,6 +70,7 @@
                                         </view>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="PdU-sQ-JQg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qwy-De-mka" secondAttribute="trailing" constant="8" symbolic="YES" id="1gA-gc-oG2"/>
                                         <constraint firstItem="PdU-sQ-JQg" firstAttribute="centerY" secondItem="gz4-KW-8lg" secondAttribute="centerY" id="71a-34-uu5"/>
                                         <constraint firstItem="Xzv-7c-bPa" firstAttribute="leading" secondItem="gz4-KW-8lg" secondAttribute="leadingMargin" id="HqH-eq-uwS"/>
                                         <constraint firstItem="qwy-De-mka" firstAttribute="centerY" secondItem="gz4-KW-8lg" secondAttribute="centerY" id="JYu-mD-y9b"/>
