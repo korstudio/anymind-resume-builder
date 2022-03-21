@@ -19,13 +19,13 @@
         <!--Resume-->
         <scene sceneID="tg7-3G-Ht1">
             <objects>
-                <tableViewController id="65O-qd-MdE" sceneMemberID="viewController">
+                <tableViewController id="65O-qd-MdE" customClass="ResumeListViewController" customModule="ResumeBuilder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="rtk-VP-IUG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.89019607840000003" green="0.87450980389999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="75" id="r1e-mS-s4V">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="75" id="r1e-mS-s4V" customClass="ResumeItemCell" customModule="ResumeBuilder" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r1e-mS-s4V" id="gz4-KW-8lg">
@@ -34,21 +34,28 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xzv-7c-bPa">
                                             <rect key="frame" x="20" y="22.5" width="22.5" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="AYW-2r-E9Q"/>
+                                                <constraint firstAttribute="width" constant="22.5" id="IzX-E8-UaA"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="FontAwesome6Free-Solid" family="Font Awesome 6 Free" pointSize="30"/>
                                             <color key="textColor" systemColor="systemIndigoColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qwy-De-mka">
-                                            <rect key="frame" x="62.5" y="16.5" width="112" height="42.5"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qwy-De-mka">
+                                            <rect key="frame" x="62.5" y="20" width="112" height="35"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resume of A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdX-pt-f6u">
-                                                    <rect key="frame" x="0.0" y="0.0" width="112" height="25"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="112" height="10"/>
                                                     <fontDescription key="fontDescription" name="AtkinsonHyperlegible-Regular" family="Atkinson Hyperlegible" pointSize="20"/>
                                                     <color key="textColor" systemColor="systemIndigoColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Jan 2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaa-u9-OVK">
-                                                    <rect key="frame" x="0.0" y="25" width="112" height="17.5"/>
+                                                    <rect key="frame" x="0.0" y="20" width="112" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="M65-Jo-5ZI"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="AtkinsonHyperlegible-Regular" family="Atkinson Hyperlegible" pointSize="14"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -71,11 +78,12 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="PdU-sQ-JQg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qwy-De-mka" secondAttribute="trailing" constant="8" symbolic="YES" id="1gA-gc-oG2"/>
+                                        <constraint firstAttribute="bottom" secondItem="qwy-De-mka" secondAttribute="bottom" constant="20" id="6jE-8s-wRM"/>
                                         <constraint firstItem="PdU-sQ-JQg" firstAttribute="centerY" secondItem="gz4-KW-8lg" secondAttribute="centerY" id="71a-34-uu5"/>
                                         <constraint firstItem="Xzv-7c-bPa" firstAttribute="leading" secondItem="gz4-KW-8lg" secondAttribute="leadingMargin" id="HqH-eq-uwS"/>
-                                        <constraint firstItem="qwy-De-mka" firstAttribute="centerY" secondItem="gz4-KW-8lg" secondAttribute="centerY" id="JYu-mD-y9b"/>
                                         <constraint firstItem="qwy-De-mka" firstAttribute="leading" secondItem="Xzv-7c-bPa" secondAttribute="trailing" constant="20" id="Jxm-5f-Kjg"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="2HD-X5-kqx" secondAttribute="trailing" id="P5i-to-Dnh"/>
+                                        <constraint firstItem="qwy-De-mka" firstAttribute="top" secondItem="gz4-KW-8lg" secondAttribute="top" constant="20" id="W01-Rf-Jzu"/>
                                         <constraint firstItem="Xzv-7c-bPa" firstAttribute="centerY" secondItem="gz4-KW-8lg" secondAttribute="centerY" id="kin-mj-Mtl"/>
                                         <constraint firstItem="2HD-X5-kqx" firstAttribute="leading" secondItem="gz4-KW-8lg" secondAttribute="leading" constant="20" symbolic="YES" id="tVF-19-zFL"/>
                                         <constraint firstAttribute="bottom" secondItem="2HD-X5-kqx" secondAttribute="bottom" id="uzX-w3-dvh"/>
@@ -83,8 +91,12 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dateLabel" destination="vaa-u9-OVK" id="oLA-j1-WSa"/>
+                                    <outlet property="titleLabel" destination="TdX-pt-f6u" id="1ln-aF-7zq"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="75" id="gYk-FZ-uk1">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="75" id="gYk-FZ-uk1" customClass="NewResumeCell" customModule="ResumeBuilder" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="119.5" width="414" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gYk-FZ-uk1" id="eUQ-NY-C1E">
@@ -140,7 +152,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="180" id="Ehj-2p-cTo">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="180" id="Ehj-2p-cTo" customClass="ImageCell" customModule="ResumeBuilder" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="49.5" width="414" height="180"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ehj-2p-cTo" id="gik-dC-Fxw">
@@ -171,8 +183,11 @@
                                         <constraint firstItem="sU8-BJ-Z1J" firstAttribute="centerY" secondItem="gik-dC-Fxw" secondAttribute="centerY" id="xux-HY-kJB"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="photoImageView" destination="IN6-4D-YaT" id="Zwf-w2-2GG"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextFieldCell" rowHeight="100" id="Agk-kQ-1d3">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextFieldCell" rowHeight="100" id="Agk-kQ-1d3" customClass="TextFieldCell" customModule="ResumeBuilder" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="229.5" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Agk-kQ-1d3" id="1A4-MC-YXY">
@@ -205,8 +220,12 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="8Ch-aw-fr5" secondAttribute="trailing" id="SrL-J2-Ldf"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titleLabel" destination="XTl-Hy-bob" id="YGs-zT-dOj"/>
+                                    <outlet property="valueTextField" destination="qHa-0u-wBT" id="7jp-gt-y87"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextViewCell" rowHeight="130" id="MUz-wB-GHg">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextViewCell" rowHeight="130" id="MUz-wB-GHg" customClass="TextViewCell" customModule="ResumeBuilder" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="329.5" width="414" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MUz-wB-GHg" id="jG8-UU-Lqe">
@@ -241,8 +260,12 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="Fq5-gM-hcf" secondAttribute="trailing" id="uxn-8s-Ky3"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titleLabel" destination="gyt-Xg-l4M" id="8Ar-ac-xbT"/>
+                                    <outlet property="valueTextView" destination="bEV-r5-Mxd" id="Axe-V5-Umi"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorkInputCell" rowHeight="110" id="9Aa-BA-eHB">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorkInputCell" rowHeight="110" id="9Aa-BA-eHB" customClass="WorkInputCell" customModule="ResumeBuilder" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="459.5" width="414" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Aa-BA-eHB" id="ZRy-Cl-Esh">
@@ -271,8 +294,12 @@
                                         <constraint firstItem="ELV-NC-0xA" firstAttribute="leading" secondItem="ZRy-Cl-Esh" secondAttribute="leadingMargin" id="vcc-mN-JEz"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="companyTextField" destination="9SN-Gm-bW9" id="wvd-ln-XVI"/>
+                                    <outlet property="durationTextField" destination="iQm-Me-QgR" id="NRn-lu-Hab"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SkillInputCell" rowHeight="66" id="zeT-pS-ktr">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SkillInputCell" rowHeight="66" id="zeT-pS-ktr" customClass="SkillInputCell" customModule="ResumeBuilder" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="569.5" width="414" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zeT-pS-ktr" id="Wwn-51-BZA">
@@ -296,8 +323,11 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="VR9-bI-yDG" secondAttribute="trailing" id="lrg-jL-p7J"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="skillTextField" destination="Ar7-PS-hw8" id="vnI-I5-4Hg"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EducationInputCell" rowHeight="150" id="REj-Bs-TTw">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EducationInputCell" rowHeight="150" id="REj-Bs-TTw" customClass="EducationInputCell" customModule="ResumeBuilder" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="635.5" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="REj-Bs-TTw" id="BVh-4y-q8v">
@@ -331,8 +361,13 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="sXm-Eh-kN2" secondAttribute="trailing" id="ShE-TH-opL"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="classTextField" destination="VTb-zp-OQL" id="AKz-mk-iOE"/>
+                                    <outlet property="endYearTextField" destination="459-HA-h5a" id="AYV-zt-NDq"/>
+                                    <outlet property="gpaTextField" destination="2dY-hu-rEl" id="4Ru-77-vHg"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProjectInputCell" rowHeight="238" id="0Dj-oj-90e">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProjectInputCell" rowHeight="238" id="0Dj-oj-90e" customClass="ProjectInputCell" customModule="ResumeBuilder" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="785.5" width="414" height="238"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Dj-oj-90e" id="1Z3-Be-Nl5">
@@ -350,7 +385,7 @@
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Team Size" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="IkU-CB-ofP">
                                                     <rect key="frame" x="0.0" y="44" width="374" height="34"/>
                                                     <fontDescription key="fontDescription" name="AtkinsonHyperlegible-Regular" family="Atkinson Hyperlegible" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Summary" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kPU-Za-hEg">
                                                     <rect key="frame" x="0.0" y="88" width="374" height="34"/>
@@ -376,6 +411,13 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="CPY-Ea-rqE" secondAttribute="trailing" id="vCt-B6-Yqv"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="roleTextField" destination="NzB-QV-62Z" id="9zk-3o-IDm"/>
+                                    <outlet property="summaryTextField" destination="kPU-Za-hEg" id="rcZ-Ix-Gf5"/>
+                                    <outlet property="teamSizeTextField" destination="IkU-CB-ofP" id="5UD-oP-D45"/>
+                                    <outlet property="techTextField" destination="1RO-YJ-0AO" id="NPx-Vp-56Q"/>
+                                    <outlet property="titleTextField" destination="Kbj-zN-Lx5" id="ZY2-ya-22b"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -386,16 +428,27 @@
                     <navigationItem key="navigationItem" title=" " id="tCL-1R-O3U">
                         <barButtonItem key="leftBarButtonItem" title="Close" image="ic-close" style="plain" id="Tv6-V6-b9B">
                             <color key="tintColor" red="0.89019607840000003" green="0.87450980389999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="onClose:" destination="dT7-Cx-1iF" id="qaX-O4-3m1"/>
+                            </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem style="done" systemItem="save" id="C2w-nK-BAF">
                                 <color key="tintColor" red="0.50196078430000002" green="0.54901960780000003" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="onSave:" destination="dT7-Cx-1iF" id="Pg5-HC-WEL"/>
+                                </connections>
                             </barButtonItem>
-                            <barButtonItem title="Item" image="ic-file-pdf" id="MFw-a6-Yvi"/>
+                            <barButtonItem title="Item" image="ic-file-pdf" id="MFw-a6-Yvi">
+                                <connections>
+                                    <action selector="onSavePDF:" destination="dT7-Cx-1iF" id="aPR-xw-ps7"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fYg-5K-Q85" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="dT7-Cx-1iF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3002.898550724638" y="159.375"/>
         </scene>
