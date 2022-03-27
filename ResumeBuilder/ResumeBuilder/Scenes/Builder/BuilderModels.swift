@@ -88,6 +88,7 @@ enum Builder {
         }
 
         struct ViewModel {
+            let sections: [Section]
             let context: ResumeContext
         }
     }

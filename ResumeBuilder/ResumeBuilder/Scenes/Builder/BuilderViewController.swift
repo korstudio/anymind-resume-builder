@@ -16,6 +16,7 @@ class BuilderViewController: UITableViewController {
     var interactor: BuilderBusinessLogic?
     var router: (NSObjectProtocol & BuilderRoutingLogic & BuilderDataPassing)?
 
+    var sections: [Builder.Section] = []
     var resumeContext: Builder.ResumeContext = .init()
 
     // MARK: Object lifecycle
@@ -77,5 +78,45 @@ extension BuilderViewController: BuilderDisplayLogic {
     func displayResume(viewModel: Builder.RenderTable.ViewModel) {
         resumeContext = viewModel.context
         tableView.reloadData()
+    }
+}
+
+extension BuilderViewController: UITableViewDataSource {
+    public override func numberOfSections(in tableView: UITableView) -> Int {
+        sections.count
+    }
+
+    public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let theSection = sections[section]
+        switch theSection {
+        case .works: return resumeContext.works.count
+        case .skills: return resumeContext.skills.count
+        case .educations: return resumeContext.educations.count
+        case .projects: return resumeContext.projects.count
+        default: return theSection.rowCount
+        }
+    }
+
+    public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let theSection = sections[indexPath.section]
+        let cellType: UITableViewCell.Type
+        switch theSection {
+        case .photo: cellType = ImageCell.self
+        case .info:
+            if indexPath.row == 2 {
+                cellType = TextViewCell.self
+            } else {
+                cellType = TextFieldCell.self
+            }
+        case .career: cellType = TextFieldCell.self
+        case .yearsExp: cellType = TextFieldCell.self
+        case .works: cellType = WorkInputCell.self
+        case .skills: cellType = SkillInputCell.self
+        case .educations: cellType = EducationInputCell.self
+        case .projects: cellType = ProjectInputCell.self
+        }
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(type: cellType), for: indexPath)
+        
     }
 }
