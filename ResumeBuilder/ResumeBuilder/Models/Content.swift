@@ -32,3 +32,30 @@ enum Content {
         var role = ""
     }
 }
+
+enum Field {
+    case photo
+    case mobile
+    case email
+    case address
+    case career
+    case yearExp
+    case companyName
+    case duration
+    case skill
+    case `class`
+    case endYear
+    case gpa
+    case project
+    case teamSize
+    case summary
+    case tech
+    case role
+    case text
+}
+
+struct DisplayValue {
+    var section: Builder.Section = .info
+    var index: Int = 0
+    var content: [Field: String] = [:]
+}

@@ -15,7 +15,7 @@ enum Builder {
         case textFieldGroup
         case image
         case addRow
-        
+
         var cellHeight: CGFloat {
             switch self {
             case .textField: return 100
@@ -26,21 +26,26 @@ enum Builder {
             }
         }
     }
-    
-    enum Section: CaseIterable {
+
+    enum Section {
         case photo
         case info
+        case mobile
+        case email
+        case address
         case career
         case yearsExp
         case works
         case skills
         case educations
         case projects
-        
+
         var cellHeight: CGFloat {
             switch self {
             case .photo: return 180
-            case .info: return CellType.textField.cellHeight
+            case .info, .mobile, .email:
+                return CellType.textField.cellHeight
+            case .address: return CellType.textView.cellHeight
             case .career: return CellType.textField.cellHeight
             case .yearsExp: return CellType.textField.cellHeight
             case .works: return 110
@@ -71,25 +76,23 @@ enum Builder {
             case .skills: return "Skills"
             case .educations: return "Educations"
             case .projects: return "Projects"
+            default: return ""
             }
         }
 
-        var cells: [(title: String, type: CellType)] {
+        var cells: (title: String, type: CellType) {
             switch self {
-            case .photo:
-                return [(title: "Photo", type: .image)]
-            case .info:
-                return [
-                    ("Mobile number", .textField),
-                    ("E-mail", .textField),
-                    ("Address", .textView)
-                ]
-            case .career: return [("Career Objective", .textField)]
-            case .yearsExp: return [("Total Years of experience", .textField)]
-            case .works: return [("Work Summary", .textFieldGroup)]
-            case .skills: return [("Skills", .textFieldGroup)]
-            case .educations: return [("Educations", .textFieldGroup)]
-            case .projects: return [("Projects", .textFieldGroup)]
+            case .photo: return ("Photo", .image)
+            case .info: return ("Personal Information", .textField)
+            case .mobile: return ("Mobile number", .textField)
+            case .email: return ("E-mail", .textField)
+            case .address: return ("Address", .textView)
+            case .career: return ("Career Objective", .textField)
+            case .yearsExp: return ("Total Years of experience", .textField)
+            case .works: return ("Work Summary", .textFieldGroup)
+            case .skills: return ("Skills", .textFieldGroup)
+            case .educations: return ("Educations", .textFieldGroup)
+            case .projects: return ("Projects", .textFieldGroup)
             }
         }
     }
