@@ -11,7 +11,7 @@ import Foundation
 enum Content {
     struct WorkSummaryItem {
         var companyName = ""
-        var durations = ""
+        var duration = ""
     }
 
     struct SkillItem {

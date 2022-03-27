@@ -21,4 +21,7 @@ class SkillInputCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func set(skill: String) {
+        skillTextField.text = skill
+    }
 }

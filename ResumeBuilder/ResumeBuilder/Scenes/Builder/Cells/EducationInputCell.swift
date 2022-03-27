@@ -23,4 +23,9 @@ class EducationInputCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func set(`class`: String, year: String, gpa: String) {
+        classTextField.text = `class`
+        endYearTextField.text = year
+        gpaTextField.text = gpa
+    }
 }

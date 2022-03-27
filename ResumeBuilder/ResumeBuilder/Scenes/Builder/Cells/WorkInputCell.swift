@@ -22,4 +22,8 @@ class WorkInputCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func set(company: String, duration: String) {
+        companyTextField.text = company
+        durationTextField.text = duration
+    }
 }

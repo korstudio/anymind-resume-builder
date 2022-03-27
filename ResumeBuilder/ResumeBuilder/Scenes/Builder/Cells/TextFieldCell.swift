@@ -22,4 +22,8 @@ class TextFieldCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func set(title: String, text: String) {
+        titleLabel.text = title
+        valueTextField.text = text
+    }
 }

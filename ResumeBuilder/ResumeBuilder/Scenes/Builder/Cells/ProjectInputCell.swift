@@ -25,4 +25,11 @@ class ProjectInputCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func set(title: String, teamSize: String, summary: String, techUsed: String, role: String) {
+        titleTextField.text = title
+        teamSizeTextField.text = teamSize
+        summaryTextField.text = summary
+        techTextField.text = techUsed
+        roleTextField.text = role
+    }
 }
