@@ -8,13 +8,15 @@
 
 import UIKit
 
-protocol BuilderDisplayLogic: AnyObject {}
+protocol BuilderDisplayLogic: AnyObject {
+    func displayResume(viewModel: Builder.RenderTable.ViewModel)
+}
 
 class BuilderViewController: UITableViewController {
-    
-
     var interactor: BuilderBusinessLogic?
     var router: (NSObjectProtocol & BuilderRoutingLogic & BuilderDataPassing)?
+
+    var resumeContext: Builder.ResumeContext = .init()
 
     // MARK: Object lifecycle
 
@@ -58,6 +60,7 @@ class BuilderViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        interactor?.getResumeAndDisplay(request: .init())
     }
     
     @IBAction func onClose(_ sender: UIBarButtonItem) {
@@ -70,4 +73,9 @@ class BuilderViewController: UITableViewController {
     }
 }
 
-extension BuilderViewController: BuilderDisplayLogic {}
+extension BuilderViewController: BuilderDisplayLogic {
+    func displayResume(viewModel: Builder.RenderTable.ViewModel) {
+        resumeContext = viewModel.context
+        tableView.reloadData()
+    }
+}

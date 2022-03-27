@@ -61,7 +61,7 @@ enum Builder {
     }
 
     struct ResumeContext {
-        var photoBase64 = ""
+        var photoData: Data?
         var mobile = ""
         var email = ""
         var address = ""
@@ -81,15 +81,14 @@ enum Builder {
 
     enum GetResume {
         struct Request {
-            let id: String
         }
 
         struct Response {
-            let resume: Resume
+            let resume: Resume?
         }
 
         struct ViewModel {
-            let resume: Resume
+            let context: ResumeContext
         }
     }
 }
