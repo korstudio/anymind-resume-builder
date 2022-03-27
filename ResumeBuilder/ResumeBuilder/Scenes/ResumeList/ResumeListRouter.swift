@@ -3,12 +3,14 @@
 //  ResumeBuilder
 //
 //  Created by Methas Tariya on 21/3/22.
-//  Copyright (c) 2022 ___ORGANIZATIONNAME___. All rights reserved.
+//  Copyright (c) 2022 Methas Tariya. All rights reserved.
 //
 
 import UIKit
 
-@objc protocol ResumeListRoutingLogic {}
+protocol ResumeListRoutingLogic {
+    func routeToBuilder()
+}
 
 protocol ResumeListDataPassing {
     var dataStore: ResumeListDataStore? { get }
@@ -17,4 +19,13 @@ protocol ResumeListDataPassing {
 class ResumeListRouter: NSObject, ResumeListRoutingLogic, ResumeListDataPassing {
     weak var viewController: ResumeListViewController?
     var dataStore: ResumeListDataStore?
+
+    func routeToBuilder() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let navVC = storyboard.instantiateViewController(withIdentifier: "BuilderNavViewController")
+        if #available(iOS 13, *) {
+            navVC.isModalInPresentation = true
+        }
+        viewController?.present(navVC, animated: true)
+    }
 }

@@ -3,7 +3,7 @@
 //  ResumeBuilder
 //
 //  Created by Methas Tariya on 21/3/22.
-//  Copyright (c) 2022 ___ORGANIZATIONNAME___. All rights reserved.
+//  Copyright (c) 2022 Methas Tariya. All rights reserved.
 //
 
 import UIKit
@@ -58,7 +58,22 @@ class ResumeListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    @IBAction func onNewTapped(_ sender: UIBarButtonItem) {
+        router?.routeToBuilder()
     }
 }
 
 extension ResumeListViewController: ResumeListDisplayLogic {}
+
+extension ResumeListViewController {
+//    public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        super.tableView(tableView, cellForRowAt: indexPath)
+//    }
+}

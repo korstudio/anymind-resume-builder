@@ -137,7 +137,14 @@
                             <outlet property="delegate" destination="65O-qd-MdE" id="ato-J8-Gqu"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Resume" id="Qnw-eI-j4T"/>
+                    <navigationItem key="navigationItem" title="Resume" id="Qnw-eI-j4T">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus.square.fill.on.square.fill" catalog="system" id="J0X-ch-XAr">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="onNewTapped:" destination="65O-qd-MdE" id="9XZ-Im-ccM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m1M-WL-Q0c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -146,8 +153,8 @@
         <!-- -->
         <scene sceneID="Q2V-zs-ZO4">
             <objects>
-                <tableViewController id="Hl7-oH-qNY" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="Hg3-mQ-Vdx">
+                <tableViewController storyboardIdentifier="BuilderViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Hl7-oH-qNY" customClass="BuilderViewController" customModule="ResumeBuilder" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="Hg3-mQ-Vdx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -427,39 +434,40 @@
                     </tableView>
                     <navigationItem key="navigationItem" title=" " id="tCL-1R-O3U">
                         <barButtonItem key="leftBarButtonItem" title="Close" image="ic-close" style="plain" id="Tv6-V6-b9B">
-                            <color key="tintColor" red="0.89019607840000003" green="0.87450980389999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.50196078430000002" green="0.54901960780000003" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <action selector="onClose:" destination="dT7-Cx-1iF" id="qaX-O4-3m1"/>
+                                <action selector="onClose:" destination="Hl7-oH-qNY" id="F3R-qA-XCq"/>
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem style="done" systemItem="save" id="C2w-nK-BAF">
                                 <color key="tintColor" red="0.50196078430000002" green="0.54901960780000003" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <action selector="onSave:" destination="dT7-Cx-1iF" id="Pg5-HC-WEL"/>
+                                    <action selector="onSave:" destination="Hl7-oH-qNY" id="Qkz-rk-jpk"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="ic-file-pdf" id="MFw-a6-Yvi">
+                                <color key="tintColor" red="0.89019607840000003" green="0.87450980389999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <action selector="onSavePDF:" destination="dT7-Cx-1iF" id="aPR-xw-ps7"/>
+                                    <action selector="onSavePDF:" destination="Hl7-oH-qNY" id="Rfg-p0-5Fm"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fYg-5K-Q85" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="dT7-Cx-1iF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3002.898550724638" y="159.375"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YeW-S7-eIe">
             <objects>
-                <navigationController id="7dc-ct-CsV" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="BuilderNavViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7dc-ct-CsV" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LXn-dL-Flz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.50196078430000002" green="0.54901960780000003" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.50196078430000002" green="0.54901960780000003" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.89019607840000003" green="0.87450980389999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="AtkinsonHyperlegible-Regular" family="Atkinson Hyperlegible" pointSize="18"/>
@@ -502,6 +510,7 @@
     <resources>
         <image name="ic-close" width="24" height="24"/>
         <image name="ic-file-pdf" width="18" height="24"/>
+        <image name="plus.square.fill.on.square.fill" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
