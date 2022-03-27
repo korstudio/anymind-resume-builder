@@ -41,6 +41,7 @@
 		11E981F327E337FA004F4E22 /* AtkinsonHyperlegible-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11E981F127E337FA004F4E22 /* AtkinsonHyperlegible-Bold.ttf */; };
 		5C99E1B07C01A9BE181ECCB9 /* Resume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C99E185BB88A35136F5010B /* Resume.swift */; };
 		5C99E9B4607E611052E280B6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C99ECB065F0F7BA4DD63A1A /* User.swift */; };
+		5C99EFB896089875BB0C72C7 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C99E636DFBF8A757049128B /* Content.swift */; };
 		CE27B5B387064A8083FFFF6F /* Pods_ResumeBuilderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE93B3AC7E28C43332CECB2 /* Pods_ResumeBuilderTests.framework */; };
 		DEDC3F5D0142A268600C8EC5 /* Pods_ResumeBuilder_ResumeBuilderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D222399048921951DF068467 /* Pods_ResumeBuilder_ResumeBuilderUITests.framework */; };
 		EEE456FDFFF886903582605A /* Pods_ResumeBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C19D822DFB31A3E3B9EFC5 /* Pods_ResumeBuilder.framework */; };
@@ -105,6 +106,7 @@
 		48C19D822DFB31A3E3B9EFC5 /* Pods_ResumeBuilder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResumeBuilder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DFDF29EF2E598CDBCEB94C5 /* Pods-ResumeBuilder-ResumeBuilderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResumeBuilder-ResumeBuilderUITests.release.xcconfig"; path = "Target Support Files/Pods-ResumeBuilder-ResumeBuilderUITests/Pods-ResumeBuilder-ResumeBuilderUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5C99E185BB88A35136F5010B /* Resume.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resume.swift; sourceTree = "<group>"; };
+		5C99E636DFBF8A757049128B /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		5C99ECB065F0F7BA4DD63A1A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6CFF865E2FE5D9443D910BA6 /* Pods-ResumeBuilderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResumeBuilderTests.debug.xcconfig"; path = "Target Support Files/Pods-ResumeBuilderTests/Pods-ResumeBuilderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6EE93B3AC7E28C43332CECB2 /* Pods_ResumeBuilderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResumeBuilderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +157,7 @@
 			children = (
 				5C99E185BB88A35136F5010B /* Resume.swift */,
 				5C99ECB065F0F7BA4DD63A1A /* User.swift */,
+				5C99E636DFBF8A757049128B /* Content.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
+				ORGANIZATIONNAME = "Methas Tariya";
 				TargetAttributes = {
 					11E981B727E32814004F4E22 = {
 						CreatedOnToolsVersion = 13.3;
@@ -591,6 +595,7 @@
 				1173136127E87B73002D2F17 /* ResumeItemCell.swift in Sources */,
 				5C99E1B07C01A9BE181ECCB9 /* Resume.swift in Sources */,
 				5C99E9B4607E611052E280B6 /* User.swift in Sources */,
+				5C99EFB896089875BB0C72C7 /* Content.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
