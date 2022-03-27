@@ -6,12 +6,16 @@ target 'ResumeBuilder' do
   pod 'SkeletonView'
   pod 'IQKeyboardManager'
   pod 'RealmSwift', '~>10'
+  pod 'RxSwift', '6.5.0'
+  pod 'RxCocoa', '6.5.0'
 
   target 'ResumeBuilderTests' do
     inherit! :search_paths
 
     pod 'Quick'
     pod 'Nimble'
+    pod 'RxBlocking', '6.5.0'
+    pod 'RxTest', '6.5.0'
   end
 
   target 'ResumeBuilderUITests' do

@@ -7,6 +7,16 @@ PODS:
   - Realm/Headers (10.15.0)
   - RealmSwift (10.15.0):
     - Realm (= 10.15.0)
+  - RxBlocking (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
+  - RxTest (6.5.0):
+    - RxSwift (= 6.5.0)
   - SkeletonView (1.25.0)
 
 DEPENDENCIES:
@@ -14,6 +24,10 @@ DEPENDENCIES:
   - Nimble
   - Quick
   - RealmSwift (~> 10)
+  - RxBlocking (= 6.5.0)
+  - RxCocoa (= 6.5.0)
+  - RxSwift (= 6.5.0)
+  - RxTest (= 6.5.0)
   - SkeletonView
 
 SPEC REPOS:
@@ -23,6 +37,11 @@ SPEC REPOS:
     - Quick
     - Realm
     - RealmSwift
+    - RxBlocking
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - RxTest
     - SkeletonView
 
 SPEC CHECKSUMS:
@@ -31,8 +50,13 @@ SPEC CHECKSUMS:
   Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
   Realm: 13e805eb23d3eb8d8bb700d9cf9761f4b625b389
   RealmSwift: 51b29bb4e19fe7322c8a599cf3494b8a08888ef1
+  RxBlocking: 04b5fd28bb5ea49f7d64b80db8bbfe50d9cc1c7d
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  RxTest: eb2d23adefc5a5ebf5779c7792fa3edfe6ebcc17
   SkeletonView: 49cd15e1a78760d712866d13ac35d8c00e62ec63
 
-PODFILE CHECKSUM: f4d02515460a0ef30a6bca7357531f83d7400f01
+PODFILE CHECKSUM: 2f99d1198336501b17d973cf721b46fb1ac4a70d
 
 COCOAPODS: 1.11.3
