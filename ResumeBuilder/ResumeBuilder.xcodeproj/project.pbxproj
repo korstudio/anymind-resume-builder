@@ -28,6 +28,7 @@
 		1173137B27E87EFC002D2F17 /* SkillInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173137A27E87EFC002D2F17 /* SkillInputCell.swift */; };
 		1173137D27E87F1F002D2F17 /* EducationInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173137C27E87F1F002D2F17 /* EducationInputCell.swift */; };
 		1173137F27E87F3C002D2F17 /* ProjectInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173137E27E87F3C002D2F17 /* ProjectInputCell.swift */; };
+		11E6BCA827F0E7B800A4F975 /* AddRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E6BCA727F0E7B800A4F975 /* AddRowCell.swift */; };
 		11E981BC27E32814004F4E22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E981BB27E32814004F4E22 /* AppDelegate.swift */; };
 		11E981C327E32814004F4E22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11E981C127E32814004F4E22 /* Main.storyboard */; };
 		11E981C527E32815004F4E22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11E981C427E32815004F4E22 /* Assets.xcassets */; };
@@ -88,6 +89,7 @@
 		1173137A27E87EFC002D2F17 /* SkillInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillInputCell.swift; sourceTree = "<group>"; };
 		1173137C27E87F1F002D2F17 /* EducationInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationInputCell.swift; sourceTree = "<group>"; };
 		1173137E27E87F3C002D2F17 /* ProjectInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectInputCell.swift; sourceTree = "<group>"; };
+		11E6BCA727F0E7B800A4F975 /* AddRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRowCell.swift; sourceTree = "<group>"; };
 		11E981B827E32814004F4E22 /* ResumeBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResumeBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11E981BB27E32814004F4E22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11E981C227E32814004F4E22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				1173137A27E87EFC002D2F17 /* SkillInputCell.swift */,
 				1173137C27E87F1F002D2F17 /* EducationInputCell.swift */,
 				1173137E27E87F3C002D2F17 /* ProjectInputCell.swift */,
+				11E6BCA727F0E7B800A4F975 /* AddRowCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				1173136E27E87CB5002D2F17 /* BuilderModels.swift in Sources */,
 				1173136B27E87CB5002D2F17 /* BuilderPresenter.swift in Sources */,
 				1173137B27E87EFC002D2F17 /* SkillInputCell.swift in Sources */,
+				11E6BCA827F0E7B800A4F975 /* AddRowCell.swift in Sources */,
 				11E981BC27E32814004F4E22 /* AppDelegate.swift in Sources */,
 				1173135C27E87880002D2F17 /* ResumeListModels.swift in Sources */,
 				1173137927E87EDF002D2F17 /* WorkInputCell.swift in Sources */,
