@@ -122,14 +122,15 @@ extension BuilderViewController {
             switch indexPath.row {
             case 0:
                 let textCell = cell as? TextFieldCell
-                textCell?.assign(viewController: self, section: theSection, indexPath: indexPath)
+                textCell?.assign(view: self, section: theSection, indexPath: indexPath)
                 textCell?.set(title: Builder.Section.mobile.title, text: resumeContext.mobile)
             case 1:
                 let textCell = cell as? TextFieldCell
-                textCell?.assign(viewController: self, section: theSection, indexPath: indexPath)
+                textCell?.assign(view: self, section: theSection, indexPath: indexPath)
                 textCell?.set(title: Builder.Section.email.title, text: resumeContext.email)
             case 2:
                 let textViewCell = cell as? TextViewCell
+                textViewCell?.assign(view: self, section: theSection, indexPath: indexPath)
                 textViewCell?.set(title: Builder.Section.address.title, text: resumeContext.address)
             default: break
             }
@@ -138,14 +139,14 @@ extension BuilderViewController {
         if theSection == .career {
             let title = theSection.cells.title
             let textCell = cell as? TextFieldCell
-            textCell?.assign(viewController: self, section: theSection, indexPath: indexPath)
+            textCell?.assign(view: self, section: theSection, indexPath: indexPath)
             textCell?.set(title: title, text: resumeContext.careerObj)
         }
 
         if theSection == .yearsExp {
             let title = theSection.cells.title
             let textCell = cell as? TextFieldCell
-            textCell?.assign(viewController: self, section: theSection, indexPath: indexPath)
+            textCell?.assign(view: self, section: theSection, indexPath: indexPath)
             textCell?.set(title: title, text: resumeContext.years)
         }
 
@@ -210,10 +211,8 @@ extension BuilderViewController {
         switch section {
         case .photo:
             cellType = ImageCell.self
-        case .info where indexPath.row == 2:
+        case .address:
             cellType = TextViewCell.self
-        case .info, .career, .yearsExp:
-            cellType = TextFieldCell.self
         case .works:
             if isLast(indexPath.row, of: .works) {
                 cellType = AddRowCell.self
@@ -238,6 +237,8 @@ extension BuilderViewController {
             } else {
                 cellType = ProjectInputCell.self
             }
+        default:
+            cellType = TextFieldCell.self
         }
 
         return cellType

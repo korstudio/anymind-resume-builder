@@ -15,7 +15,7 @@ class TextViewCell: UITableViewCell {
 
     var value = PublishRelay<DisplayValue>()
     private let disposeBag = DisposeBag()
-    private let storedValue = DisplayValue()
+    private var storedValue = DisplayValue()
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,7 +24,7 @@ class TextViewCell: UITableViewCell {
                 .text
                 .subscribe(onNext: { [weak self] text in
                     self?.storedValue.content = [.text: text ?? ""]
-                    if let storedValue = storedValue {
+                    if let storedValue = self?.storedValue {
                         self?.value.accept(storedValue)
                     }
                 })

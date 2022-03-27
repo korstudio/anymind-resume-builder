@@ -17,9 +17,6 @@ class ImageCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-//        let gesture = UITapGestureRecognizer()
-//        photoImageView.rx.gesture(gesture)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -30,11 +27,5 @@ class ImageCell: UITableViewCell {
 
     func set(image: UIImage?) {
         photoImageView.image = image
-    }
-}
-
-extension ImageCell: UIGestureRecognizerDelegate {
-    public override func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-        super.gestureRecognizer(gestureRecognizer, shouldReceive: touch)
     }
 }

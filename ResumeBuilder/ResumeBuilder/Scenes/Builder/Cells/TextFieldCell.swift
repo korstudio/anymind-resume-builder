@@ -15,7 +15,7 @@ class TextFieldCell: UITableViewCell {
 
     var value = PublishRelay<DisplayValue>()
     private let disposeBag = DisposeBag()
-    private let storedValue = DisplayValue()
+    private var storedValue = DisplayValue()
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,7 +25,9 @@ class TextFieldCell: UITableViewCell {
                 .drive(
                     onNext: { [weak self] text in
                         self?.storedValue.content = [.text: text ?? ""]
-                        self?.value.accept(storedValue)
+                        if let storedValue = self?.storedValue {
+                            self?.value.accept(storedValue)
+                        }
                     }
                 )
                 .disposed(by: disposeBag)
