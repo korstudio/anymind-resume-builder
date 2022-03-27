@@ -426,6 +426,27 @@
                                     <outlet property="titleTextField" destination="Kbj-zN-Lx5" id="ZY2-ya-22b"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddRowCell" rowHeight="40" id="jrl-jo-lD6">
+                                <rect key="frame" x="0.0" y="1023.5" width="414" height="40"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jrl-jo-lD6" id="edm-6F-Z04">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejb-wq-KXi">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="ic-row-add"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="ejb-wq-KXi" secondAttribute="bottom" id="PIo-vs-3sQ"/>
+                                        <constraint firstItem="ejb-wq-KXi" firstAttribute="top" secondItem="edm-6F-Z04" secondAttribute="top" id="j8C-Ju-66I"/>
+                                        <constraint firstAttribute="trailing" secondItem="ejb-wq-KXi" secondAttribute="trailing" id="kv8-IR-IyC"/>
+                                        <constraint firstItem="ejb-wq-KXi" firstAttribute="leading" secondItem="edm-6F-Z04" secondAttribute="leading" id="xmE-Hp-yE6"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="Hl7-oH-qNY" id="igb-fS-nKY"/>
@@ -510,6 +531,7 @@
     <resources>
         <image name="ic-close" width="24" height="24"/>
         <image name="ic-file-pdf" width="18" height="24"/>
+        <image name="ic-row-add" width="20" height="20"/>
         <image name="plus.square.fill.on.square.fill" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
