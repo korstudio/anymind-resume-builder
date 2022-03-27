@@ -10,6 +10,7 @@ import UIKit
 
 protocol BuilderDisplayLogic: AnyObject {
     func displayResume(viewModel: Builder.GetResume.ViewModel)
+    func updateValue(with value: DisplayValue)
 }
 
 class BuilderViewController: UITableViewController {
@@ -83,6 +84,10 @@ extension BuilderViewController: BuilderDisplayLogic {
         resumeContext = viewModel.context
         tableView.reloadData()
     }
+
+    func updateValue(with value: DisplayValue) {
+
+    }
 }
 
 extension BuilderViewController {
@@ -114,30 +119,33 @@ extension BuilderViewController {
         }
 
         if theSection == .info {
-            let sectionCell = theSection.cells[indexPath.row]
             switch indexPath.row {
             case 0:
                 let textCell = cell as? TextFieldCell
-                textCell?.set(title: sectionCell.title, text: resumeContext.mobile)
+                textCell?.assign(viewController: self, section: theSection, indexPath: indexPath)
+                textCell?.set(title: Builder.Section.mobile.title, text: resumeContext.mobile)
             case 1:
                 let textCell = cell as? TextFieldCell
-                textCell?.set(title: sectionCell.title, text: resumeContext.email)
+                textCell?.assign(viewController: self, section: theSection, indexPath: indexPath)
+                textCell?.set(title: Builder.Section.email.title, text: resumeContext.email)
             case 2:
                 let textViewCell = cell as? TextViewCell
-                textViewCell?.set(title: sectionCell.title, text: resumeContext.address)
+                textViewCell?.set(title: Builder.Section.address.title, text: resumeContext.address)
             default: break
             }
         }
 
-        if theSection == .career,
-           let title = theSection.cells.first?.title {
+        if theSection == .career {
+            let title = theSection.cells.title
             let textCell = cell as? TextFieldCell
+            textCell?.assign(viewController: self, section: theSection, indexPath: indexPath)
             textCell?.set(title: title, text: resumeContext.careerObj)
         }
 
-        if theSection == .yearsExp,
-           let title = theSection.cells.first?.title {
+        if theSection == .yearsExp {
+            let title = theSection.cells.title
             let textCell = cell as? TextFieldCell
+            textCell?.assign(viewController: self, section: theSection, indexPath: indexPath)
             textCell?.set(title: title, text: resumeContext.years)
         }
 
