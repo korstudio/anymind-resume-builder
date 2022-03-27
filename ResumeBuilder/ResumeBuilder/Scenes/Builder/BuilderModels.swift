@@ -58,6 +58,19 @@ enum Builder {
             default: return .max
             }
         }
+
+        var title: String {
+            switch self {
+            case .photo: return "Photo"
+            case .info: return "Personal Information"
+            case .career: return "Career Objective"
+            case .yearsExp: return "Total Years of experience"
+            case .works: return "Work Summary"
+            case .skills: return "Skills"
+            case .educations: return "Educations"
+            case .projects: return "Projects"
+            }
+        }
     }
 
     struct ResumeContext {
@@ -75,7 +88,7 @@ enum Builder {
 
     enum RenderTable {
         struct ViewModel {
-            mutating let context: ResumeContext
+            var context: ResumeContext
         }
     }
 
@@ -84,6 +97,7 @@ enum Builder {
         }
 
         struct Response {
+            let sections: [Section]
             let resume: Resume?
         }
 

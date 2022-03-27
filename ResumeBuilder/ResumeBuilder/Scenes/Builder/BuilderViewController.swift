@@ -9,7 +9,7 @@
 import UIKit
 
 protocol BuilderDisplayLogic: AnyObject {
-    func displayResume(viewModel: Builder.RenderTable.ViewModel)
+    func displayResume(viewModel: Builder.GetResume.ViewModel)
 }
 
 class BuilderViewController: UITableViewController {
@@ -65,23 +65,27 @@ class BuilderViewController: UITableViewController {
     }
     
     @IBAction func onClose(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
     }
     
     @IBAction func onSavePDF(_ sender: UIBarButtonItem) {
     }
     
     @IBAction func onSave(_ sender: UIBarButtonItem) {
+        // TODO: implement this
+        dismiss(animated: true)
     }
 }
 
 extension BuilderViewController: BuilderDisplayLogic {
-    func displayResume(viewModel: Builder.RenderTable.ViewModel) {
+    func displayResume(viewModel: Builder.GetResume.ViewModel) {
+        sections = viewModel.sections
         resumeContext = viewModel.context
         tableView.reloadData()
     }
 }
 
-extension BuilderViewController: UITableViewDataSource {
+extension BuilderViewController {
     public override func numberOfSections(in tableView: UITableView) -> Int {
         sections.count
     }
@@ -117,6 +121,24 @@ extension BuilderViewController: UITableViewDataSource {
         }
 
         let cell = tableView.dequeueReusableCell(withIdentifier: String(type: cellType), for: indexPath)
-        
+
+        return cell
+    }
+
+    public override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let theSection = sections[indexPath.section]
+        switch theSection {
+        case .info:
+            if indexPath.row == 2 {
+                return Builder.CellType.textView.cellHeight
+            } else {
+                return Builder.CellType.textField.cellHeight
+            }
+        default: return theSection.cellHeight
+        }
+    }
+
+    public override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        sections[section].title
     }
 }

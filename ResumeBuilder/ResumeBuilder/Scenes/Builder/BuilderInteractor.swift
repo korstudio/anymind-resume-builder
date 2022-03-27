@@ -23,7 +23,7 @@ class BuilderInteractor: BuilderBusinessLogic, BuilderDataStore {
     var worker: BuilderWorker?
     var selectedResumeId: ObjectId?
     var selectedResume: Resume?
-    private(set) var sections: [Builder.Section] {
+    var sections: [Builder.Section] {
         [
             .photo,
             .info,
@@ -36,9 +36,9 @@ class BuilderInteractor: BuilderBusinessLogic, BuilderDataStore {
         ]
     }
 
-    func getResumeAndDisplay() {
+    func getResumeAndDisplay(request: Builder.GetResume.Request) {
         guard let realm = try? Realm() else {
-            presenter?.presentSelectedResume(response: .init(resume: nil))
+            presenter?.presentSelectedResume(response: .init(sections: sections, resume: selectedResume))
             return
         }
 
@@ -46,6 +46,6 @@ class BuilderInteractor: BuilderBusinessLogic, BuilderDataStore {
         selectedResume = resumes.first {
             $0._id == selectedResumeId
         }
-        presenter?.presentSelectedResume(response: .init(resume: selectedResume))
+        presenter?.presentSelectedResume(response: .init(sections: sections, resume: selectedResume))
     }
 }
