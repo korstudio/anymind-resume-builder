@@ -39,6 +39,7 @@
 		11E981EF27E33760004F4E22 /* Font Awesome 6 Free-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 11E981ED27E33760004F4E22 /* Font Awesome 6 Free-Regular-400.otf */; };
 		11E981F227E337FA004F4E22 /* AtkinsonHyperlegible-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11E981F027E337FA004F4E22 /* AtkinsonHyperlegible-Regular.ttf */; };
 		11E981F327E337FA004F4E22 /* AtkinsonHyperlegible-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11E981F127E337FA004F4E22 /* AtkinsonHyperlegible-Bold.ttf */; };
+		5C99E1B034ABE19F2A727284 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C99EBE3D779101FC2001700 /* StringExtension.swift */; };
 		5C99E1B07C01A9BE181ECCB9 /* Resume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C99E185BB88A35136F5010B /* Resume.swift */; };
 		5C99E9B4607E611052E280B6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C99ECB065F0F7BA4DD63A1A /* User.swift */; };
 		5C99EFB896089875BB0C72C7 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C99E636DFBF8A757049128B /* Content.swift */; };
@@ -107,6 +108,7 @@
 		4DFDF29EF2E598CDBCEB94C5 /* Pods-ResumeBuilder-ResumeBuilderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResumeBuilder-ResumeBuilderUITests.release.xcconfig"; path = "Target Support Files/Pods-ResumeBuilder-ResumeBuilderUITests/Pods-ResumeBuilder-ResumeBuilderUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5C99E185BB88A35136F5010B /* Resume.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resume.swift; sourceTree = "<group>"; };
 		5C99E636DFBF8A757049128B /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		5C99EBE3D779101FC2001700 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		5C99ECB065F0F7BA4DD63A1A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6CFF865E2FE5D9443D910BA6 /* Pods-ResumeBuilderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResumeBuilderTests.debug.xcconfig"; path = "Target Support Files/Pods-ResumeBuilderTests/Pods-ResumeBuilderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6EE93B3AC7E28C43332CECB2 /* Pods_ResumeBuilderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResumeBuilderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,6 +256,7 @@
 		11E981F527E338D0004F4E22 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5C99EBE3D779101FC2001700 /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -596,6 +599,7 @@
 				5C99E1B07C01A9BE181ECCB9 /* Resume.swift in Sources */,
 				5C99E9B4607E611052E280B6 /* User.swift in Sources */,
 				5C99EFB896089875BB0C72C7 /* Content.swift in Sources */,
+				5C99E1B034ABE19F2A727284 /* StringExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
