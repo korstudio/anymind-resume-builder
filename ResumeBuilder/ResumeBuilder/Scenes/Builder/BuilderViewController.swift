@@ -122,6 +122,64 @@ extension BuilderViewController {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: String(type: cellType), for: indexPath)
 
+        if theSection == .photo,
+           let photoCell = cell as? ImageCell,
+           let photoData = resumeContext.photoData {
+            photoCell.set(image: .init(data: photoData))
+        }
+
+        if theSection == .info {
+            let sectionCell = theSection.cells[indexPath.row]
+            switch indexPath.row {
+            case 0:
+                let textCell = cell as? TextFieldCell
+                textCell?.set(title: sectionCell.title, text: resumeContext.mobile)
+            case 1:
+                let textCell = cell as? TextFieldCell
+                textCell?.set(title: sectionCell.title, text: resumeContext.email)
+            case 2:
+                let textViewCell = cell as? TextViewCell
+                textViewCell?.set(title: sectionCell.title, text: resumeContext.address)
+            default: break
+            }
+        }
+
+        if theSection == .career,
+           let title = theSection.cells.first?.title {
+            let textCell = cell as? TextFieldCell
+            textCell?.set(title: title, text: resumeContext.careerObj)
+        }
+
+        if theSection == .yearsExp,
+           let title = theSection.cells.first?.title {
+            let textCell = cell as? TextFieldCell
+            textCell?.set(title: title, text: resumeContext.years)
+        }
+
+        if theSection == .works,
+           let workCell = cell as? WorkInputCell,
+           let workItem = resumeContext.works[safe: indexPath.row] {
+            workCell.set(company: workItem.companyName, duration: workItem.duration)
+        }
+
+        if theSection == .skills,
+           let skillCell = cell as? SkillInputCell,
+           let skillItem = resumeContext.skills[safe: indexPath.row] {
+            skillCell.set(skill: skillItem.title)
+        }
+
+        if theSection == .educations,
+           let eduCell = cell as? EducationInputCell,
+           let eduItem = resumeContext.educations[safe: indexPath.row] {
+            eduCell.set(class: eduItem.class, year: eduItem.endYear, gpa: eduItem.gpa)
+        }
+
+        if theSection == .projects,
+           let projCell = cell as? ProjectInputCell,
+           let projItem = resumeContext.projects[safe: indexPath.row] {
+            projCell.set(title: projItem.name, teamSize: projItem.teamSize, summary: projItem.summary, techUsed: projItem.techUsed, role: projItem.role)
+        }
+
         return cell
     }
 

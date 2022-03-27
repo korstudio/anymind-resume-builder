@@ -55,7 +55,7 @@ enum Builder {
                  .yearsExp:
                 return 1
             case .info: return 3
-            default: return .max
+            default: return 0
             }
         }
 
@@ -63,12 +63,31 @@ enum Builder {
             switch self {
             case .photo: return "Photo"
             case .info: return "Personal Information"
-            case .career: return "Career Objective"
-            case .yearsExp: return "Total Years of experience"
+            case .career: return ""
+            case .yearsExp: return ""
             case .works: return "Work Summary"
             case .skills: return "Skills"
             case .educations: return "Educations"
             case .projects: return "Projects"
+            }
+        }
+
+        var cells: [(title: String, type: CellType)] {
+            switch self {
+            case .photo:
+                return [(title: "Photo", type: .image)]
+            case .info:
+                return [
+                    ("Mobile number", .textField),
+                    ("E-mail", .textField),
+                    ("Address", .textView)
+                ]
+            case .career: return [("Career Objective", .textField)]
+            case .yearsExp: return [("Total Years of experience", .textField)]
+            case .works: return [("Work Summary", .textFieldGroup)]
+            case .skills: return [("Skills", .textFieldGroup)]
+            case .educations: return [("Educations", .textFieldGroup)]
+            case .projects: return [("Projects", .textFieldGroup)]
             }
         }
     }
