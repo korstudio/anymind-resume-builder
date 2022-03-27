@@ -20,7 +20,7 @@ enum Builder {
             case .textField: return 100
             case .textView: return 130
             case .image: return 180
-            default: return CGFloat.infinity
+            default: return .infinity
             }
         }
     }
@@ -47,9 +47,39 @@ enum Builder {
             case .projects: return 238
             }
         }
+
+        var rowCount: Int {
+            switch self {
+            case .photo,
+                 .career,
+                 .yearsExp:
+                return 1
+            case .info: return 3
+            default: return .max
+            }
+        }
     }
 
-    enum Display {
+    struct ResumeContext {
+        var photoBase64 = ""
+        var mobile = ""
+        var email = ""
+        var address = ""
+        var careerObj = ""
+        var years = ""
+        var works = [Content.WorkSummaryItem]()
+        var skills = [Content.SkillItem]()
+        var educations = [Content.EducationItem]()
+        var projects = [Content.ProjectItem]()
+    }
+
+    enum RenderTable {
+        struct ViewModel {
+            mutating let context: ResumeContext
+        }
+    }
+
+    enum GetResume {
         struct Request {
             let id: String
         }

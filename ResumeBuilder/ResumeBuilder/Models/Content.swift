@@ -9,5 +9,26 @@
 import Foundation
 
 enum Content {
+    struct WorkSummaryItem {
+        var companyName = ""
+        var durations = ""
+    }
 
+    struct SkillItem {
+        var title = ""
+    }
+
+    struct EducationItem {
+        var `class` = ""
+        var endYear = ""
+        var gpa = ""
+    }
+
+    struct ProjectItem {
+        var name = ""
+        var teamSize = ""
+        var summary = ""
+        var techUsed = ""
+        var role = ""
+    }
 }
