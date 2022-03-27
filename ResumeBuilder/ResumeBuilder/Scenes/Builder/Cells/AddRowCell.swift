@@ -9,12 +9,13 @@
 import UIKit
 
 protocol AddRowCellDelegate: AnyObject {
-    func addRowButtonDidTap(for section: Builder.Section)
+    func addRowButtonDidTap(for section: Builder.Section, at indexPath: IndexPath)
 }
 
 class AddRowCell: UITableViewCell {
     @IBOutlet private var addButton: UIButton!
-    
+
+    var indexPath: IndexPath = .init(row: 0, section: 0)
     var section: Builder.Section = .info
     weak var delegate: AddRowCellDelegate?
 
@@ -30,6 +31,6 @@ class AddRowCell: UITableViewCell {
     }
 
     @IBAction func onAddRowTapped() {
-        delegate?.addRowButtonDidTap(for: section)
+        delegate?.addRowButtonDidTap(for: section, at: indexPath)
     }
 }

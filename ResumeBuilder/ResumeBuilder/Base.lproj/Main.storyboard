@@ -154,7 +154,7 @@
         <scene sceneID="Q2V-zs-ZO4">
             <objects>
                 <tableViewController storyboardIdentifier="BuilderViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Hl7-oH-qNY" customClass="BuilderViewController" customModule="ResumeBuilder" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="Hg3-mQ-Vdx">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" delaysContentTouches="NO" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="Hg3-mQ-Vdx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -426,7 +426,7 @@
                                     <outlet property="titleTextField" destination="Kbj-zN-Lx5" id="ZY2-ya-22b"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddRowCell" rowHeight="40" id="jrl-jo-lD6">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddRowCell" rowHeight="40" id="jrl-jo-lD6" customClass="AddRowCell" customModule="ResumeBuilder" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="1023.5" width="414" height="40"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jrl-jo-lD6" id="edm-6F-Z04">
@@ -435,8 +435,12 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejb-wq-KXi">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                                            <color key="tintColor" red="0.50196078430000002" green="0.54901960780000003" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" image="ic-row-add"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="ic-row-add" title=" "/>
+                                            <connections>
+                                                <action selector="onAddRowTapped" destination="jrl-jo-lD6" eventType="touchUpInside" id="9lJ-b1-uxJ"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -446,6 +450,9 @@
                                         <constraint firstItem="ejb-wq-KXi" firstAttribute="leading" secondItem="edm-6F-Z04" secondAttribute="leading" id="xmE-Hp-yE6"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="addButton" destination="ejb-wq-KXi" id="bDv-9V-I0H"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

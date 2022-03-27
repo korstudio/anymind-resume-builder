@@ -93,32 +93,17 @@ extension BuilderViewController {
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let theSection = sections[section]
         switch theSection {
-        case .works: return resumeContext.works.count
-        case .skills: return resumeContext.skills.count
-        case .educations: return resumeContext.educations.count
-        case .projects: return resumeContext.projects.count
+        case .works: return resumeContext.works.count + 1
+        case .skills: return resumeContext.skills.count + 1
+        case .educations: return resumeContext.educations.count + 1
+        case .projects: return resumeContext.projects.count + 1
         default: return theSection.rowCount
         }
     }
 
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let theSection = sections[indexPath.section]
-        let cellType: UITableViewCell.Type
-        switch theSection {
-        case .photo: cellType = ImageCell.self
-        case .info:
-            if indexPath.row == 2 {
-                cellType = TextViewCell.self
-            } else {
-                cellType = TextFieldCell.self
-            }
-        case .career: cellType = TextFieldCell.self
-        case .yearsExp: cellType = TextFieldCell.self
-        case .works: cellType = WorkInputCell.self
-        case .skills: cellType = SkillInputCell.self
-        case .educations: cellType = EducationInputCell.self
-        case .projects: cellType = ProjectInputCell.self
-        }
+        let cellType = getCellType(at: indexPath)
 
         let cell = tableView.dequeueReusableCell(withIdentifier: String(type: cellType), for: indexPath)
 
@@ -180,6 +165,12 @@ extension BuilderViewController {
             projCell.set(title: projItem.name, teamSize: projItem.teamSize, summary: projItem.summary, techUsed: projItem.techUsed, role: projItem.role)
         }
 
+        if let addCell = cell as? AddRowCell {
+            addCell.indexPath = indexPath
+            addCell.section = theSection
+            addCell.delegate = self
+        }
+
         return cell
     }
 
@@ -192,11 +183,89 @@ extension BuilderViewController {
             } else {
                 return Builder.CellType.textField.cellHeight
             }
+        case .works where isLast(indexPath.row, of: .works),
+             .skills where isLast(indexPath.row, of: .skills),
+             .educations where isLast(indexPath.row, of: .educations),
+             .projects where isLast(indexPath.row, of: .projects):
+            return Builder.CellType.addRow.cellHeight
         default: return theSection.cellHeight
         }
     }
 
     public override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         sections[section].title
+    }
+
+    private func getCellType(at indexPath: IndexPath) -> UITableViewCell.Type {
+        let section = sections[indexPath.section]
+        let cellType: UITableViewCell.Type
+        switch section {
+        case .photo:
+            cellType = ImageCell.self
+        case .info where indexPath.row == 2:
+            cellType = TextViewCell.self
+        case .info, .career, .yearsExp:
+            cellType = TextFieldCell.self
+        case .works:
+            if isLast(indexPath.row, of: .works) {
+                cellType = AddRowCell.self
+            } else {
+                cellType = WorkInputCell.self
+            }
+        case .skills:
+            if isLast(indexPath.row, of: .skills) {
+                cellType = AddRowCell.self
+            } else {
+                cellType = SkillInputCell.self
+            }
+        case .educations:
+            if isLast(indexPath.row, of: .educations) {
+                cellType = AddRowCell.self
+            } else {
+                cellType = EducationInputCell.self
+            }
+        case .projects:
+            if isLast(indexPath.row, of: .projects) {
+                cellType = AddRowCell.self
+            } else {
+                cellType = ProjectInputCell.self
+            }
+        }
+
+        return cellType
+    }
+
+    private func isLast(_ row: Int, of section: Builder.Section) -> Bool {
+        switch section {
+        case .works: return row == resumeContext.works.endIndex
+        case .skills: return row == resumeContext.skills.endIndex
+        case .educations: return row == resumeContext.educations.endIndex
+        case .projects: return row == resumeContext.projects.endIndex
+        default: return false
+        }
+    }
+}
+
+extension BuilderViewController: AddRowCellDelegate {
+    func addRowButtonDidTap(for section: Builder.Section, at indexPath: IndexPath) {
+        let count: Int
+        switch section {
+        case .works:
+            resumeContext.works.append(.init())
+            count = resumeContext.works.count
+        case .skills:
+            resumeContext.skills.append(.init())
+            count = resumeContext.skills.count
+        case .educations:
+            resumeContext.educations.append(.init())
+            count = resumeContext.educations.count
+        case .projects:
+            resumeContext.projects.append(.init())
+            count = resumeContext.projects.count
+        default:
+            count = 0
+        }
+
+        tableView.insertRows(at: [.init(row: count - 1, section: indexPath.section)], with: .bottom)
     }
 }

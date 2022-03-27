@@ -14,12 +14,14 @@ enum Builder {
         case textView
         case textFieldGroup
         case image
+        case addRow
         
         var cellHeight: CGFloat {
             switch self {
             case .textField: return 100
             case .textView: return 130
             case .image: return 180
+            case .addRow: return 40
             default: return .infinity
             }
         }
