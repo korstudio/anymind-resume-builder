@@ -7,21 +7,20 @@
 
 import UIKit
 
-class SkillInputCell: UITableViewCell {
+class SkillInputCell: BaseInputCell {
     @IBOutlet private var skillTextField: UITextField!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        subscribe(input: skillTextField) { [weak self] value in
+            self?.setValue(key: .skill, value: value)
+            self?.publish()
+        }
     }
 
     func set(skill: String) {
         skillTextField.text = skill
+        setValues([.skill: skill])
     }
 }
