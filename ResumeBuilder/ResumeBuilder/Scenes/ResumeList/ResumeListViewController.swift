@@ -58,7 +58,7 @@ class ResumeListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        Style.applyNavStyles(of: navigationController, color: .yellow)
     }
 
     override func viewDidAppear(_ animated: Bool) {
