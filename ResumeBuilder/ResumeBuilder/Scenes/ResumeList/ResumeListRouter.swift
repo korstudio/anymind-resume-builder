@@ -23,9 +23,10 @@ class ResumeListRouter: NSObject, ResumeListRoutingLogic, ResumeListDataPassing 
     func routeToBuilder() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let navVC = storyboard.instantiateViewController(withIdentifier: "BuilderNavViewController")
-        if #available(iOS 13, *) {
-            navVC.isModalInPresentation = true
-        }
-        viewController?.present(navVC, animated: true)
+        viewController?.push(navVC)
+//        if #available(iOS 13, *) {
+//            navVC.isModalInPresentation = true
+//        }
+//        viewController?.present(navVC, animated: true)
     }
 }
