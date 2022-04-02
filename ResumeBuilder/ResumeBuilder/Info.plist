@@ -9,5 +9,11 @@
 		<string>AtkinsonHyperlegible-Bold.ttf</string>
 		<string>AtkinsonHyperlegible-Regular.ttf</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Take a person photo to attach with resume</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Choose a picture to attach with resume</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<true/>
 </dict>
 </plist>
