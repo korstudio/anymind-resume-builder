@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Gallery
+import CropViewController
 
 protocol BuilderDisplayLogic: AnyObject {
     func displayResume(viewModel: Builder.GetResume.ViewModel)
@@ -19,6 +21,8 @@ class BuilderViewController: UITableViewController {
 
     var sections: [Builder.Section] = []
     var resumeContext: Builder.ResumeContext = .init()
+
+    lazy var galleryCtrl = GalleryController()
 
     // MARK: Object lifecycle
 
@@ -62,6 +66,10 @@ class BuilderViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        galleryCtrl.delegate = self
+        Gallery.Config.tabsToShow = [.imageTab, .cameraTab]
+        Gallery.Config.initialTab = .imageTab
+
         interactor?.getResumeAndDisplay(request: .init())
     }
     
@@ -116,6 +124,11 @@ extension BuilderViewController {
            let photoCell = cell as? ImageCell,
            let photoData = resumeContext.photoData {
             photoCell.set(image: .init(data: photoData))
+        }
+
+        if theSection == .photo,
+           let photoCell = cell as? ImageCell {
+            photoCell.delegate = self
         }
 
         if theSection == .info {
@@ -276,5 +289,50 @@ extension BuilderViewController: AddRowCellDelegate {
         }
 
         tableView.insertRows(at: [.init(row: count - 1, section: indexPath.section)], with: .bottom)
+    }
+}
+
+extension BuilderViewController: ImageCellDelegate {
+    func imageCellDidTapOnImageView() {
+        present(galleryCtrl, animated: true)
+    }
+}
+
+extension BuilderViewController: GalleryControllerDelegate {
+    public func galleryController(_ controller: GalleryController, didSelectImages images: [Image]) {
+        guard let imageAsset = images.first else { return }
+        imageAsset.resolve { [weak self] image in
+            guard let image = image else { return }
+            self?.callCropViewController(image: image)
+        }
+    }
+
+    public func galleryController(_ controller: GalleryController, requestLightbox images: [Image]) {
+
+    }
+
+    public func galleryController(_ controller: GalleryController, didSelectVideo video: Video) {
+
+    }
+
+    public func galleryControllerDidCancel(_ controller: GalleryController) {
+        
+    }
+
+    private func callCropViewController(image: UIImage) {
+        let cropCtrl = CropViewController(image: image)
+        cropCtrl.aspectRatioPreset = .presetSquare
+        cropCtrl.delegate = self
+        DispatchQueue.main.async { [weak self] in
+            self?.galleryCtrl.dismiss(animated: true)
+            self?.present(cropCtrl, animated: true)
+        }
+    }
+}
+
+extension BuilderViewController: CropViewControllerDelegate {
+    public func cropViewController(_ cropViewController: CropViewController, didCropToImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
+        resumeContext.photoData = image.pngData()
+        tableView.reloadData()
     }
 }

@@ -9,14 +9,18 @@ import UIKit
 import RxSwift
 
 protocol ImageCellDelegate: AnyObject {
-    func imageCell(cell: ImageCell, didSelectImage image: UIImage?)
+    func imageCellDidTapOnImageView()
 }
 
 class ImageCell: UITableViewCell {
     @IBOutlet private var photoImageView: UIImageView!
+    weak var delegate: ImageCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
+
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onTapImageView))
+        photoImageView.addGestureRecognizer(tapGesture)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -27,5 +31,9 @@ class ImageCell: UITableViewCell {
 
     func set(image: UIImage?) {
         photoImageView.image = image
+    }
+
+    @objc private func onTapImageView() {
+        delegate?.imageCellDidTapOnImageView()
     }
 }
