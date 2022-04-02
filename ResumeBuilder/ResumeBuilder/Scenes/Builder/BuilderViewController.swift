@@ -70,6 +70,7 @@ class BuilderViewController: UITableViewController {
         Gallery.Config.tabsToShow = [.imageTab, .cameraTab]
         Gallery.Config.initialTab = .imageTab
 
+        Style.applyNavStyles(of: navigationController, color: .blue)
         interactor?.getResumeAndDisplay(request: .init())
     }
     
