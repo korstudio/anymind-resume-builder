@@ -43,6 +43,7 @@
 		11FE20E827F8C86200EEBFE2 /* IBMPlexSansThai-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11FE20E427F8C86200EEBFE2 /* IBMPlexSansThai-Bold.ttf */; };
 		11FE20EA27F8CEEE00EEBFE2 /* MuseoSansRounded-500.otf in Resources */ = {isa = PBXBuildFile; fileRef = 11FE20E927F8CEEE00EEBFE2 /* MuseoSansRounded-500.otf */; };
 		11FE20EC27F8D36500EEBFE2 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE20EB27F8D36500EEBFE2 /* Styles.swift */; };
+		11FE20EE27F8E24300EEBFE2 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE20ED27F8E24300EEBFE2 /* ViewExtension.swift */; };
 		5C99E1B034ABE19F2A727284 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C99EBE3D779101FC2001700 /* StringExtension.swift */; };
 		5C99E1B07C01A9BE181ECCB9 /* Resume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C99E185BB88A35136F5010B /* Resume.swift */; };
 		5C99E9B4607E611052E280B6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C99ECB065F0F7BA4DD63A1A /* User.swift */; };
@@ -112,6 +113,7 @@
 		11FE20E427F8C86200EEBFE2 /* IBMPlexSansThai-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSansThai-Bold.ttf"; sourceTree = "<group>"; };
 		11FE20E927F8CEEE00EEBFE2 /* MuseoSansRounded-500.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoSansRounded-500.otf"; sourceTree = "<group>"; };
 		11FE20EB27F8D36500EEBFE2 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		11FE20ED27F8E24300EEBFE2 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		1FA81AAAC783B98FBD0F9B86 /* Pods-ResumeBuilder-ResumeBuilderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResumeBuilder-ResumeBuilderUITests.debug.xcconfig"; path = "Target Support Files/Pods-ResumeBuilder-ResumeBuilderUITests/Pods-ResumeBuilder-ResumeBuilderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		30D5BB6E3814D121B4F639F5 /* Pods-ResumeBuilder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResumeBuilder.debug.xcconfig"; path = "Target Support Files/Pods-ResumeBuilder/Pods-ResumeBuilder.debug.xcconfig"; sourceTree = "<group>"; };
 		48C19D822DFB31A3E3B9EFC5 /* Pods_ResumeBuilder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResumeBuilder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -274,6 +276,7 @@
 				5C99EBE3D779101FC2001700 /* StringExtension.swift */,
 				5C99EDBE743B65361001737A /* ArrayExtension.swift */,
 				11FE20DF27F86D6000EEBFE2 /* ColorExtension.swift */,
+				11FE20ED27F8E24300EEBFE2 /* ViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -615,6 +618,7 @@
 				1173137B27E87EFC002D2F17 /* SkillInputCell.swift in Sources */,
 				11E6BCA827F0E7B800A4F975 /* AddRowCell.swift in Sources */,
 				11E981BC27E32814004F4E22 /* AppDelegate.swift in Sources */,
+				11FE20EE27F8E24300EEBFE2 /* ViewExtension.swift in Sources */,
 				11FE20EC27F8D36500EEBFE2 /* Styles.swift in Sources */,
 				1173135C27E87880002D2F17 /* ResumeListModels.swift in Sources */,
 				1173137927E87EDF002D2F17 /* WorkInputCell.swift in Sources */,
