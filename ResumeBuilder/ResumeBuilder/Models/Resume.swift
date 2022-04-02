@@ -7,6 +7,7 @@ import RealmSwift
 
 class Resume: Object {
     @Persisted(primaryKey: true) var _id: ObjectId
+    @Persisted var title: String
     @Persisted var info: PersonalInfo?
     @Persisted var careerObjective: String
     @Persisted var yearsExp: String
@@ -14,6 +15,7 @@ class Resume: Object {
     @Persisted var skills: List<Skill>
     @Persisted var educations: List<Education>
     @Persisted var projects: List<Project>
+    @Persisted var date = Date()
 }
 
 class PersonalInfo: EmbeddedObject {
