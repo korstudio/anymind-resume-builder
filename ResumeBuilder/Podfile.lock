@@ -1,4 +1,6 @@
 PODS:
+  - CropViewController (2.6.1)
+  - Gallery (2.4.0)
   - IQKeyboardManager (6.5.9)
   - Nimble (9.2.1)
   - Quick (4.0.0)
@@ -20,6 +22,8 @@ PODS:
   - SkeletonView (1.25.0)
 
 DEPENDENCIES:
+  - CropViewController
+  - Gallery
   - IQKeyboardManager
   - Nimble
   - Quick
@@ -32,6 +36,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - CropViewController
+    - Gallery
     - IQKeyboardManager
     - Nimble
     - Quick
@@ -45,6 +51,8 @@ SPEC REPOS:
     - SkeletonView
 
 SPEC CHECKSUMS:
+  CropViewController: 58fb440f30dac788b129d2a1f24cffdcb102669c
+  Gallery: b7fc1aeb68a39ad6d2c423574750196bf9b25e5c
   IQKeyboardManager: 241cc94ccabc9deb8f8bd7d12f00d73288d13ecc
   Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
   Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
@@ -57,6 +65,6 @@ SPEC CHECKSUMS:
   RxTest: eb2d23adefc5a5ebf5779c7792fa3edfe6ebcc17
   SkeletonView: 49cd15e1a78760d712866d13ac35d8c00e62ec63
 
-PODFILE CHECKSUM: 2f99d1198336501b17d973cf721b46fb1ac4a70d
+PODFILE CHECKSUM: 1307518b3efb0d6b0f39cdd5b5a770b6ef5eefc0
 
 COCOAPODS: 1.11.3

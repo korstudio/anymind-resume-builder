@@ -4,6 +4,8 @@ target 'ResumeBuilder' do
   use_frameworks!
 
   pod 'SkeletonView'
+  pod 'Gallery'
+  pod 'CropViewController'
   pod 'IQKeyboardManager'
   pod 'RealmSwift', '~>10'
   pod 'RxSwift', '6.5.0'
