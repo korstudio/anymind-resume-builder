@@ -4,10 +4,11 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Font Awesome 6 Free-Solid-900.otf</string>
-		<string>Font Awesome 6 Free-Regular-400.otf</string>
-		<string>AtkinsonHyperlegible-Bold.ttf</string>
-		<string>AtkinsonHyperlegible-Regular.ttf</string>
+		<string>IBMPlexSansThai-Bold.ttf</string>
+		<string>IBMPlexSansThai-Regular.ttf</string>
+		<string>MuseoSansRounded-500.otf</string>
+		<string>MuseoSansRounded-700.otf</string>
+		<string>MuseoSansRounded-900.otf</string>
 	</array>
 	<key>NSCameraUsageDescription</key>
 	<string>Take a person photo to attach with resume</string>

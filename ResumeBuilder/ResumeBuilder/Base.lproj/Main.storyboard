@@ -8,86 +8,77 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="AtkinsonHyperlegible-Regular.ttf">
-            <string>AtkinsonHyperlegible-Regular</string>
+        <array key="IBMPlexSansThai-Bold.ttf">
+            <string>IBMPlexSansThai-Bold</string>
         </array>
-        <array key="Font Awesome 6 Free-Solid-900.otf">
-            <string>FontAwesome6Free-Solid</string>
+        <array key="IBMPlexSansThai-Regular.ttf">
+            <string>IBMPlexSansThai-Regular</string>
+        </array>
+        <array key="MuseoSansRounded-500.otf">
+            <string>MuseoSansRounded-500</string>
+        </array>
+        <array key="MuseoSansRounded-900.otf">
+            <string>MuseoSansRounded-900</string>
         </array>
     </customFonts>
     <scenes>
-        <!--Resume-->
+        <!--All Resumés-->
         <scene sceneID="tg7-3G-Ht1">
             <objects>
                 <tableViewController id="65O-qd-MdE" customClass="ResumeListViewController" customModule="ResumeBuilder" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="rtk-VP-IUG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" delaysContentTouches="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="rtk-VP-IUG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.89019607840000003" green="0.87450980389999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="75" id="r1e-mS-s4V" customClass="ResumeItemCell" customModule="ResumeBuilder" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="75"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="r1e-mS-s4V" customClass="ResumeItemCell" customModule="ResumeBuilder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r1e-mS-s4V" id="gz4-KW-8lg">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xzv-7c-bPa">
-                                            <rect key="frame" x="20" y="22.5" width="22.5" height="30"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="30" id="AYW-2r-E9Q"/>
-                                                <constraint firstAttribute="width" constant="22.5" id="IzX-E8-UaA"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="FontAwesome6Free-Solid" family="Font Awesome 6 Free" pointSize="30"/>
-                                            <color key="textColor" systemColor="systemIndigoColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qwy-De-mka">
-                                            <rect key="frame" x="62.5" y="20" width="112" height="35"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qwy-De-mka">
+                                            <rect key="frame" x="20" y="12" width="100" height="36"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resume of A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdX-pt-f6u">
-                                                    <rect key="frame" x="0.0" y="0.0" width="112" height="10"/>
-                                                    <fontDescription key="fontDescription" name="AtkinsonHyperlegible-Regular" family="Atkinson Hyperlegible" pointSize="20"/>
-                                                    <color key="textColor" systemColor="systemIndigoColor"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="15.5"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSansThai-Bold" family="IBM Plex Sans Thai" pointSize="17"/>
+                                                    <color key="textColor" red="0.20392156859999999" green="0.18039215689999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Jan 2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaa-u9-OVK">
-                                                    <rect key="frame" x="0.0" y="20" width="112" height="15"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="15" id="M65-Jo-5ZI"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="AtkinsonHyperlegible-Regular" family="Atkinson Hyperlegible" pointSize="14"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <rect key="frame" x="0.0" y="20.5" width="100" height="15.5"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSansThai-Regular" family="IBM Plex Sans Thai" pointSize="14"/>
+                                                    <color key="textColor" red="0.94901960784313721" green="0.37254901960784315" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </stackView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdU-sQ-JQg">
-                                            <rect key="frame" x="385" y="30.5" width="9" height="14"/>
-                                            <fontDescription key="fontDescription" name="FontAwesome6Free-Solid" family="Font Awesome 6 Free" pointSize="14"/>
-                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2HD-X5-kqx">
-                                            <rect key="frame" x="20" y="74" width="374" height="1"/>
+                                            <rect key="frame" x="20" y="59" width="374" height="1"/>
                                             <color key="backgroundColor" red="0.89019607840000003" green="0.87450980389999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="ARy-zw-slL"/>
                                             </constraints>
                                         </view>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-edit" translatesAutoresizingMaskIntoConstraints="NO" id="oUN-YA-osP">
+                                            <rect key="frame" x="378" y="22" width="16" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="oUN-YA-osP" secondAttribute="height" multiplier="1:1" id="QmH-l2-ABk"/>
+                                                <constraint firstAttribute="width" constant="16" id="oV9-jN-h0c"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="PdU-sQ-JQg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qwy-De-mka" secondAttribute="trailing" constant="8" symbolic="YES" id="1gA-gc-oG2"/>
-                                        <constraint firstAttribute="bottom" secondItem="qwy-De-mka" secondAttribute="bottom" constant="20" id="6jE-8s-wRM"/>
-                                        <constraint firstItem="PdU-sQ-JQg" firstAttribute="centerY" secondItem="gz4-KW-8lg" secondAttribute="centerY" id="71a-34-uu5"/>
-                                        <constraint firstItem="Xzv-7c-bPa" firstAttribute="leading" secondItem="gz4-KW-8lg" secondAttribute="leadingMargin" id="HqH-eq-uwS"/>
-                                        <constraint firstItem="qwy-De-mka" firstAttribute="leading" secondItem="Xzv-7c-bPa" secondAttribute="trailing" constant="20" id="Jxm-5f-Kjg"/>
+                                        <constraint firstAttribute="bottom" secondItem="qwy-De-mka" secondAttribute="bottom" constant="12" id="6jE-8s-wRM"/>
+                                        <constraint firstItem="oUN-YA-osP" firstAttribute="trailing" secondItem="gz4-KW-8lg" secondAttribute="trailingMargin" id="HrF-o8-WsB"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="2HD-X5-kqx" secondAttribute="trailing" id="P5i-to-Dnh"/>
-                                        <constraint firstItem="qwy-De-mka" firstAttribute="top" secondItem="gz4-KW-8lg" secondAttribute="top" constant="20" id="W01-Rf-Jzu"/>
-                                        <constraint firstItem="Xzv-7c-bPa" firstAttribute="centerY" secondItem="gz4-KW-8lg" secondAttribute="centerY" id="kin-mj-Mtl"/>
+                                        <constraint firstItem="qwy-De-mka" firstAttribute="top" secondItem="gz4-KW-8lg" secondAttribute="top" constant="12" id="W01-Rf-Jzu"/>
+                                        <constraint firstItem="oUN-YA-osP" firstAttribute="centerY" secondItem="gz4-KW-8lg" secondAttribute="centerY" id="f29-pY-Da9"/>
+                                        <constraint firstItem="qwy-De-mka" firstAttribute="leading" secondItem="2HD-X5-kqx" secondAttribute="leading" id="oO6-YJ-KJO"/>
                                         <constraint firstItem="2HD-X5-kqx" firstAttribute="leading" secondItem="gz4-KW-8lg" secondAttribute="leading" constant="20" symbolic="YES" id="tVF-19-zFL"/>
                                         <constraint firstAttribute="bottom" secondItem="2HD-X5-kqx" secondAttribute="bottom" id="uzX-w3-dvh"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="PdU-sQ-JQg" secondAttribute="trailing" id="xWB-xe-jz7"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -96,50 +87,16 @@
                                     <outlet property="titleLabel" destination="TdX-pt-f6u" id="1ln-aF-7zq"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="75" id="gYk-FZ-uk1" customClass="NewResumeCell" customModule="ResumeBuilder" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="119.5" width="414" height="75"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gYk-FZ-uk1" id="eUQ-NY-C1E">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6z3-r9-X8M">
-                                            <rect key="frame" x="192.5" y="11.5" width="29" height="52"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iei-Pb-FNe">
-                                                    <rect key="frame" x="0.0" y="0.0" width="29" height="30"/>
-                                                    <fontDescription key="fontDescription" name="FontAwesome6Free-Solid" family="Font Awesome 6 Free" pointSize="30"/>
-                                                    <color key="textColor" systemColor="systemRedColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4c-jq-uAY">
-                                                    <rect key="frame" x="0.0" y="35" width="29" height="17"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
-                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="6z3-r9-X8M" firstAttribute="centerX" secondItem="eUQ-NY-C1E" secondAttribute="centerX" id="O8I-1k-Ctw"/>
-                                        <constraint firstItem="6z3-r9-X8M" firstAttribute="centerY" secondItem="eUQ-NY-C1E" secondAttribute="centerY" id="n60-J5-adh"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.89019607840000003" green="0.87450980389999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <segue destination="7dc-ct-CsV" kind="presentation" id="4AI-Gw-ytE"/>
-                                </connections>
-                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="65O-qd-MdE" id="b7J-gF-ZOw"/>
                             <outlet property="delegate" destination="65O-qd-MdE" id="ato-J8-Gqu"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Resume" id="Qnw-eI-j4T">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus.square.fill.on.square.fill" catalog="system" id="J0X-ch-XAr">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="All Resumés" id="Qnw-eI-j4T">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="ic-new-resume" style="plain" id="J0X-ch-XAr">
+                            <color key="tintColor" red="0.20392156859999999" green="0.18039215689999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="onNewTapped:" destination="65O-qd-MdE" id="9XZ-Im-ccM"/>
                             </connections>
@@ -150,12 +107,12 @@
             </objects>
             <point key="canvasLocation" x="1298.5507246376812" y="160.04464285714286"/>
         </scene>
-        <!-- -->
+        <!--New-->
         <scene sceneID="Q2V-zs-ZO4">
             <objects>
                 <tableViewController storyboardIdentifier="BuilderViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Hl7-oH-qNY" customClass="BuilderViewController" customModule="ResumeBuilder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" delaysContentTouches="NO" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="Hg3-mQ-Vdx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -167,19 +124,19 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sU8-BJ-Z1J">
-                                            <rect key="frame" x="147" y="16.5" width="120" height="147.5"/>
+                                            <rect key="frame" x="147" y="17" width="120" height="146"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IN6-4D-YaT">
+                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IN6-4D-YaT">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="IN6-4D-YaT" secondAttribute="height" multiplier="1:1" id="OVV-n4-Mxx"/>
                                                         <constraint firstAttribute="width" constant="120" id="xu6-Hg-MdD"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOW-WF-AVa">
-                                                    <rect key="frame" x="0.0" y="130" width="120" height="17.5"/>
-                                                    <fontDescription key="fontDescription" name="AtkinsonHyperlegible-Regular" family="Atkinson Hyperlegible" pointSize="14"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHOOSE A PHOTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOW-WF-AVa">
+                                                    <rect key="frame" x="0.0" y="130" width="120" height="16"/>
+                                                    <fontDescription key="fontDescription" name="MuseoSansRounded-900" family="Museo Sans Rounded" pointSize="13"/>
+                                                    <color key="textColor" red="0.88235294117647056" green="0.88627450980392153" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -202,20 +159,21 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8Ch-aw-fr5">
-                                            <rect key="frame" x="20" y="16.5" width="374" height="67.5"/>
+                                            <rect key="frame" x="20" y="17" width="374" height="66"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTl-Hy-bob">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="17.5"/>
-                                                    <fontDescription key="fontDescription" name="AtkinsonHyperlegible-Regular" family="Atkinson Hyperlegible" pointSize="14"/>
-                                                    <color key="textColor" red="0.50196078430000002" green="0.54901960780000003" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="16"/>
+                                                    <fontDescription key="fontDescription" name="MuseoSansRounded-500" family="Museo Sans Rounded" pointSize="13"/>
+                                                    <color key="textColor" red="0.23529411759999999" green="0.56862745100000001" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="tet" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qHa-0u-wBT">
-                                                    <rect key="frame" x="0.0" y="27.5" width="374" height="40"/>
+                                                    <rect key="frame" x="0.0" y="26" width="374" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="IZy-Gs-yTz"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.20392156859999999" green="0.18039215689999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSansThai-Regular" family="IBM Plex Sans Thai" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
@@ -240,22 +198,22 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fq5-gM-hcf">
-                                            <rect key="frame" x="20" y="14" width="374" height="102.5"/>
+                                            <rect key="frame" x="20" y="14.5" width="374" height="101"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyt-Xg-l4M">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="17.5"/>
-                                                    <fontDescription key="fontDescription" name="AtkinsonHyperlegible-Regular" family="Atkinson Hyperlegible" pointSize="14"/>
-                                                    <color key="textColor" red="0.50196078430000002" green="0.54901960780000003" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="16"/>
+                                                    <fontDescription key="fontDescription" name="MuseoSansRounded-500" family="Museo Sans Rounded" pointSize="13"/>
+                                                    <color key="textColor" red="0.23529411759999999" green="0.56862745100000001" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="p" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bEV-r5-Mxd">
-                                                    <rect key="frame" x="0.0" y="27.5" width="374" height="75"/>
+                                                    <rect key="frame" x="0.0" y="26" width="374" height="75"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="75" id="Gw4-Jg-RHZ"/>
                                                     </constraints>
-                                                    <color key="textColor" systemColor="labelColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.20392156859999999" green="0.18039215689999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSansThai-Regular" family="IBM Plex Sans Thai" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                             </subviews>
@@ -280,16 +238,18 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ELV-NC-0xA">
-                                            <rect key="frame" x="20" y="16" width="374" height="78"/>
+                                            <rect key="frame" x="20" y="14" width="374" height="82"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Company Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9SN-Gm-bW9">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
-                                                    <fontDescription key="fontDescription" name="AtkinsonHyperlegible-Regular" family="Atkinson Hyperlegible" pointSize="14"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Company Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9SN-Gm-bW9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="36"/>
+                                                    <color key="textColor" red="0.20392156859999999" green="0.18039215689999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSansThai-Regular" family="IBM Plex Sans Thai" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Duration" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iQm-Me-QgR">
-                                                    <rect key="frame" x="0.0" y="44" width="374" height="34"/>
-                                                    <fontDescription key="fontDescription" name="AtkinsonHyperlegible-Regular" family="Atkinson Hyperlegible" pointSize="14"/>
+                                                    <rect key="frame" x="0.0" y="46" width="374" height="36"/>
+                                                    <color key="textColor" red="0.20392156859999999" green="0.18039215689999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSansThai-Regular" family="IBM Plex Sans Thai" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
@@ -314,11 +274,12 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VR9-bI-yDG">
-                                            <rect key="frame" x="20" y="16" width="374" height="34"/>
+                                            <rect key="frame" x="20" y="15" width="374" height="36"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Skill" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ar7-PS-hw8">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
-                                                    <fontDescription key="fontDescription" name="AtkinsonHyperlegible-Regular" family="Atkinson Hyperlegible" pointSize="14"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="36"/>
+                                                    <color key="textColor" red="0.20392156859999999" green="0.18039215689999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSansThai-Regular" family="IBM Plex Sans Thai" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
@@ -342,21 +303,24 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sXm-Eh-kN2">
-                                            <rect key="frame" x="20" y="14" width="374" height="122"/>
+                                            <rect key="frame" x="20" y="11" width="374" height="128"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Class" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VTb-zp-OQL">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
-                                                    <fontDescription key="fontDescription" name="AtkinsonHyperlegible-Regular" family="Atkinson Hyperlegible" pointSize="14"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="36"/>
+                                                    <color key="textColor" red="0.20392156859999999" green="0.18039215689999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSansThai-Regular" family="IBM Plex Sans Thai" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Passing Year" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="459-HA-h5a">
-                                                    <rect key="frame" x="0.0" y="44" width="374" height="34"/>
-                                                    <fontDescription key="fontDescription" name="AtkinsonHyperlegible-Regular" family="Atkinson Hyperlegible" pointSize="14"/>
+                                                    <rect key="frame" x="0.0" y="46" width="374" height="36"/>
+                                                    <color key="textColor" red="0.20392156859999999" green="0.18039215689999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSansThai-Regular" family="IBM Plex Sans Thai" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="GPA" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2dY-hu-rEl">
-                                                    <rect key="frame" x="0.0" y="88" width="374" height="34"/>
-                                                    <fontDescription key="fontDescription" name="AtkinsonHyperlegible-Regular" family="Atkinson Hyperlegible" pointSize="14"/>
+                                                    <rect key="frame" x="0.0" y="92" width="374" height="36"/>
+                                                    <color key="textColor" red="0.20392156859999999" green="0.18039215689999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSansThai-Regular" family="IBM Plex Sans Thai" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
@@ -382,31 +346,36 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CPY-Ea-rqE">
-                                            <rect key="frame" x="20" y="14" width="374" height="210"/>
+                                            <rect key="frame" x="20" y="9" width="374" height="220"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Project" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Kbj-zN-Lx5">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
-                                                    <fontDescription key="fontDescription" name="AtkinsonHyperlegible-Regular" family="Atkinson Hyperlegible" pointSize="14"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="36"/>
+                                                    <color key="textColor" red="0.20392156859999999" green="0.18039215689999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSansThai-Regular" family="IBM Plex Sans Thai" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Team Size" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="IkU-CB-ofP">
-                                                    <rect key="frame" x="0.0" y="44" width="374" height="34"/>
-                                                    <fontDescription key="fontDescription" name="AtkinsonHyperlegible-Regular" family="Atkinson Hyperlegible" pointSize="14"/>
+                                                    <rect key="frame" x="0.0" y="46" width="374" height="36"/>
+                                                    <color key="textColor" red="0.20392156859999999" green="0.18039215689999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSansThai-Regular" family="IBM Plex Sans Thai" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Summary" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kPU-Za-hEg">
-                                                    <rect key="frame" x="0.0" y="88" width="374" height="34"/>
-                                                    <fontDescription key="fontDescription" name="AtkinsonHyperlegible-Regular" family="Atkinson Hyperlegible" pointSize="14"/>
+                                                    <rect key="frame" x="0.0" y="92" width="374" height="36"/>
+                                                    <color key="textColor" red="0.20392156859999999" green="0.18039215689999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSansThai-Regular" family="IBM Plex Sans Thai" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Technology Used" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1RO-YJ-0AO">
-                                                    <rect key="frame" x="0.0" y="132" width="374" height="34"/>
-                                                    <fontDescription key="fontDescription" name="AtkinsonHyperlegible-Regular" family="Atkinson Hyperlegible" pointSize="14"/>
+                                                    <rect key="frame" x="0.0" y="138" width="374" height="36"/>
+                                                    <color key="textColor" red="0.20392156859999999" green="0.18039215689999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSansThai-Regular" family="IBM Plex Sans Thai" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Role" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="NzB-QV-62Z">
-                                                    <rect key="frame" x="0.0" y="176" width="374" height="34"/>
-                                                    <fontDescription key="fontDescription" name="AtkinsonHyperlegible-Regular" family="Atkinson Hyperlegible" pointSize="14"/>
+                                                    <rect key="frame" x="0.0" y="184" width="374" height="36"/>
+                                                    <color key="textColor" red="0.20392156859999999" green="0.18039215689999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSansThai-Regular" family="IBM Plex Sans Thai" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
@@ -437,7 +406,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
                                             <color key="tintColor" red="0.50196078430000002" green="0.54901960780000003" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" image="ic-row-add" title=" "/>
+                                            <buttonConfiguration key="configuration" style="plain" image="ic-add-row-blue" title=" "/>
                                             <connections>
                                                 <action selector="onAddRowTapped" destination="jrl-jo-lD6" eventType="touchUpInside" id="9lJ-b1-uxJ"/>
                                             </connections>
@@ -460,27 +429,19 @@
                             <outlet property="delegate" destination="Hl7-oH-qNY" id="fb1-w2-eWL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title=" " id="tCL-1R-O3U">
+                    <navigationItem key="navigationItem" title="New" id="tCL-1R-O3U">
                         <barButtonItem key="leftBarButtonItem" title="Close" image="ic-close" style="plain" id="Tv6-V6-b9B">
                             <color key="tintColor" red="0.50196078430000002" green="0.54901960780000003" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="onClose:" destination="Hl7-oH-qNY" id="F3R-qA-XCq"/>
                             </connections>
                         </barButtonItem>
-                        <rightBarButtonItems>
-                            <barButtonItem style="done" systemItem="save" id="C2w-nK-BAF">
-                                <color key="tintColor" red="0.50196078430000002" green="0.54901960780000003" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="onSave:" destination="Hl7-oH-qNY" id="Qkz-rk-jpk"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Item" image="ic-file-pdf" id="MFw-a6-Yvi">
-                                <color key="tintColor" red="0.89019607840000003" green="0.87450980389999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="onSavePDF:" destination="Hl7-oH-qNY" id="Rfg-p0-5Fm"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" image="ic-save" style="done" id="C2w-nK-BAF">
+                            <color key="tintColor" red="0.50196078430000002" green="0.54901960780000003" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="onSave:" destination="Hl7-oH-qNY" id="Qkz-rk-jpk"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fYg-5K-Q85" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -491,14 +452,14 @@
         <scene sceneID="YeW-S7-eIe">
             <objects>
                 <navigationController storyboardIdentifier="BuilderNavViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7dc-ct-CsV" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LXn-dL-Flz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="LXn-dL-Flz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.50196078430000002" green="0.54901960780000003" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" red="0.50196078430000002" green="0.54901960780000003" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.89019607840000003" green="0.87450980389999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.23529411764705882" green="0.56862745098039214" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.23529411764705882" green="0.56862745098039214" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="AtkinsonHyperlegible-Regular" family="Atkinson Hyperlegible" pointSize="18"/>
+                            <fontDescription key="fontDescription" name="MuseoSansRounded-700" family="Museo Sans Rounded" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
@@ -515,15 +476,15 @@
             <objects>
                 <navigationController id="CpR-Lr-v6L" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NBu-y7-85Q">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="NBu-y7-85Q">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.50196078430000002" green="0.54901960780000003" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.87843137250000003" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.50196078430000002" green="0.54901960780000003" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="1" green="0.8784313725490196" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="AtkinsonHyperlegible-Regular" family="Atkinson Hyperlegible" pointSize="18"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="MuseoSansRounded-700" family="Museo Sans Rounded" pointSize="17"/>
+                            <color key="textColor" red="0.20392156862745098" green="0.1803921568627451" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -536,21 +497,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic-close" width="24" height="24"/>
-        <image name="ic-file-pdf" width="18" height="24"/>
-        <image name="ic-row-add" width="20" height="20"/>
-        <image name="plus.square.fill.on.square.fill" catalog="system" width="128" height="113"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="ic-add-row-blue" width="20" height="20"/>
+        <image name="ic-close" width="20" height="20"/>
+        <image name="ic-edit" width="16" height="16"/>
+        <image name="ic-new-resume" width="20" height="18"/>
+        <image name="ic-save" width="20" height="20"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
