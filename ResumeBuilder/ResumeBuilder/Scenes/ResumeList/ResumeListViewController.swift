@@ -8,13 +8,17 @@
 
 import UIKit
 
-protocol ResumeListDisplayLogic: AnyObject {}
+protocol ResumeListDisplayLogic: AnyObject {
+    func displayResumeList(viewModel: ResumeList.Display.ViewModel)
+}
 
 class ResumeListViewController: UITableViewController {
     // @IBOutlet var
 
     var interactor: ResumeListBusinessLogic?
     var router: (NSObjectProtocol & ResumeListRoutingLogic & ResumeListDataPassing)?
+    
+    var resumeList: [ResumeList.ResumeContext] = []
 
     // MARK: Object lifecycle
 
@@ -70,7 +74,12 @@ class ResumeListViewController: UITableViewController {
     }
 }
 
-extension ResumeListViewController: ResumeListDisplayLogic {}
+extension ResumeListViewController: ResumeListDisplayLogic {
+    func displayResumeList(viewModel: ResumeList.Display.ViewModel) {
+        resumeList = viewModel.resumeList
+        tableView.reloadData()
+    }
+}
 
 extension ResumeListViewController {
 //    public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
