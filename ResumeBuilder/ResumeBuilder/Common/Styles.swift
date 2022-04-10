@@ -19,6 +19,7 @@ enum Style {
         case secondaryText
         case placeholder
         case error
+        case border
         
         var uiColor: UIColor {
             switch self {
@@ -30,6 +31,7 @@ enum Style {
             case .secondaryText: return "#99969b".uiColor
             case .placeholder: return "#e1e2e6".uiColor
             case .error: return "#f6908e".uiColor
+            case .border: return "#e1e2e6".uiColor
             }
         }
         
