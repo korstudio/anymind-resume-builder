@@ -377,7 +377,7 @@ extension BuilderViewController: GalleryControllerDelegate {
 
 extension BuilderViewController: CropViewControllerDelegate {
     public func cropViewController(_ cropViewController: CropViewController, didCropToImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
-        resumeContext.photoData = image.pngData()
+        resumeContext[.photo] = image.pngData()
         tableView.reloadData()
     }
 }
