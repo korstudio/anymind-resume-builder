@@ -70,8 +70,8 @@ enum Builder {
             switch self {
             case .photo: return "Photo"
             case .info: return "Personal Information"
-            case .career: return ""
-            case .yearsExp: return ""
+            case .career: return "Career"
+            case .yearsExp: return "Experience"
             case .works: return "Work Summary"
             case .skills: return "Skills"
             case .educations: return "Educations"
