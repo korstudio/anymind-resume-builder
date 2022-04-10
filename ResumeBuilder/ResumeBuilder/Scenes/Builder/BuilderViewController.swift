@@ -95,7 +95,27 @@ extension BuilderViewController: BuilderDisplayLogic {
     }
 
     func updateValue(with value: DisplayValue) {
-
+        switch value.section {
+        case .info where value.index == 0:
+            resumeContext.mobile = value.content.get(.text)
+        case .info where value.index == 1:
+            resumeContext.email = value.content.get(.text)
+        case .info where value.index == 2:
+            resumeContext.address = value.content.get(.text)
+        case .career:
+            resumeContext.careerObj = value.content.get(.text)
+        case .yearsExp:
+            resumeContext.years = value.content.get(.text)
+        case .works:
+            resumeContext[.works, at: value.index] = value.content
+        case .skills:
+            resumeContext[.skills, at: value.index] = value.content
+        case .educations:
+            resumeContext[.educations, at: value.index] = value.content
+        case .projects:
+            resumeContext[.projects, at: value.index] = value.content
+        default: break
+        }
     }
 }
 
