@@ -17,6 +17,8 @@ class SkillInputCell: BaseInputCell {
             self?.setValue(key: .skill, value: value)
             self?.publish()
         }
+        
+        Style.applyTextInputStyles(of: skillTextField)
     }
 
     func set(skill: String) {

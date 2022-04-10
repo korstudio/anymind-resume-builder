@@ -24,6 +24,9 @@ class WorkInputCell: BaseInputCell {
             self?.setValue(key: .duration, value: text)
             self?.publish()
         }
+        
+        Style.applyTextInputStyles(of: companyTextField)
+        Style.applyTextInputStyles(of: durationTextField)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

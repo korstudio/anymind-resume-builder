@@ -20,6 +20,9 @@ class TextViewCell: BaseInputCell {
             self?.setValues([.text: text])
             self?.publish()
         }
+        
+        // setup UI
+        Style.applyTextInputStyles(of: valueTextView)
     }
 
     func set(title: String, text: String) {

@@ -35,6 +35,10 @@ enum Style {
             }
         }
         
+        var cgColor: CGColor {
+            uiColor.cgColor
+        }
+        
         var textColor: UIColor {
             switch self {
             case .yellow: return Color.text.uiColor
@@ -75,5 +79,12 @@ enum Style {
         }
         
         navCtrl?.view.backgroundColor = color.uiColor
+    }
+    
+    static func applyTextInputStyles(of textInput: UIView) {
+        textInput.layer.borderWidth = 1
+        textInput.layer.borderColor = Style.Color.border.cgColor
+        textInput.layer.cornerRadius = 8
+        textInput.clipsToBounds = true
     }
 }

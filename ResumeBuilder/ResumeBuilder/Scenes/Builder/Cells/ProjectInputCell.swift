@@ -41,6 +41,12 @@ class ProjectInputCell: BaseInputCell {
             self?.setValue(key: .role, value: text)
             self?.publish()
         }
+        
+        Style.applyTextInputStyles(of: titleTextField)
+        Style.applyTextInputStyles(of: teamSizeTextField)
+        Style.applyTextInputStyles(of: summaryTextField)
+        Style.applyTextInputStyles(of: techTextField)
+        Style.applyTextInputStyles(of: roleTextField)
     }
 
     func set(title: String, teamSize: String, summary: String, techUsed: String, role: String) {

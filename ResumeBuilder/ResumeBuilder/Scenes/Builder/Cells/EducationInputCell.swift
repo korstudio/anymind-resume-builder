@@ -29,6 +29,10 @@ class EducationInputCell: BaseInputCell {
             self?.setValue(key: .gpa, value: text)
             self?.publish()
         }
+        
+        Style.applyTextInputStyles(of: classTextField)
+        Style.applyTextInputStyles(of: endYearTextField)
+        Style.applyTextInputStyles(of: gpaTextField)
     }
 
     func set(`class`: String, year: String, gpa: String) {

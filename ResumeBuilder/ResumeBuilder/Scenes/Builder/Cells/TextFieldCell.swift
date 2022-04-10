@@ -17,9 +17,11 @@ class TextFieldCell: BaseInputCell {
         super.awakeFromNib()
         // Initialization code
         subscribe(input: valueTextField) { [weak self] text in
-            self?.setValues([.text: text ?? ""])
+            self?.setValues([.text: text])
             self?.publish()
         }
+        
+        Style.applyTextInputStyles(of: valueTextField)
     }
 
     func set(title: String, text: String) {
