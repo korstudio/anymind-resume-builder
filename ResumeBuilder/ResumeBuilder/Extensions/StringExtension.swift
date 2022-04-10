@@ -10,6 +10,10 @@ import Foundation
 import UIKit
 
 extension String {
+    var uiColor: UIColor {
+        return .init(hex: self)
+    }
+    
     init(instance: Any) {
         self = String(type: type(of: instance))
     }
