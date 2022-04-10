@@ -14,6 +14,14 @@ extension String {
         return .init(hex: self)
     }
     
+    var int: Int {
+        Int(self) ?? 0
+    }
+    
+    var double: Double {
+        Double(self) ?? 0.0
+    }
+    
     init(instance: Any) {
         self = String(type: type(of: instance))
     }
