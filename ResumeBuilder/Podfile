@@ -3,7 +3,7 @@ platform :ios, '12.0'
 target 'ResumeBuilder' do
   use_frameworks!
 
-  pod 'SkeletonView'
+  pod 'Toast-Swift'
   pod 'Gallery'
   pod 'CropViewController'
   pod 'IQKeyboardManager'

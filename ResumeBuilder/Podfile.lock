@@ -19,7 +19,7 @@ PODS:
   - RxSwift (6.5.0)
   - RxTest (6.5.0):
     - RxSwift (= 6.5.0)
-  - SkeletonView (1.25.0)
+  - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
   - CropViewController
@@ -32,7 +32,7 @@ DEPENDENCIES:
   - RxCocoa (= 6.5.0)
   - RxSwift (= 6.5.0)
   - RxTest (= 6.5.0)
-  - SkeletonView
+  - Toast-Swift
 
 SPEC REPOS:
   trunk:
@@ -48,7 +48,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - RxTest
-    - SkeletonView
+    - Toast-Swift
 
 SPEC CHECKSUMS:
   CropViewController: 58fb440f30dac788b129d2a1f24cffdcb102669c
@@ -63,8 +63,8 @@ SPEC CHECKSUMS:
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   RxTest: eb2d23adefc5a5ebf5779c7792fa3edfe6ebcc17
-  SkeletonView: 49cd15e1a78760d712866d13ac35d8c00e62ec63
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 1307518b3efb0d6b0f39cdd5b5a770b6ef5eefc0
+PODFILE CHECKSUM: 75ea71573419b8cf93f52c4dbf052c9b4c16888d
 
 COCOAPODS: 1.11.3
