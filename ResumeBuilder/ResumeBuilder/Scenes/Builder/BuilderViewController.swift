@@ -142,14 +142,12 @@ extension BuilderViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(type: cellType), for: indexPath)
 
         if theSection == .photo,
-           let photoCell = cell as? ImageCell,
-           let photoData = resumeContext.photoData {
-            photoCell.set(image: .init(data: photoData))
-        }
-
-        if theSection == .photo,
            let photoCell = cell as? ImageCell {
             photoCell.delegate = self
+            
+            if let photoData = resumeContext.photoData {
+                photoCell.set(image: .init(data: photoData))
+            }
         }
 
         if theSection == .info {
@@ -187,24 +185,28 @@ extension BuilderViewController {
         if theSection == .works,
            let workCell = cell as? WorkInputCell,
            let workItem = resumeContext.works[safe: indexPath.row] {
+            workCell.assign(view: self, section: theSection, indexPath: indexPath)
             workCell.set(company: workItem.companyName, duration: workItem.duration)
         }
 
         if theSection == .skills,
            let skillCell = cell as? SkillInputCell,
            let skillItem = resumeContext.skills[safe: indexPath.row] {
+            skillCell.assign(view: self, section: theSection, indexPath: indexPath)
             skillCell.set(skill: skillItem.title)
         }
 
         if theSection == .educations,
            let eduCell = cell as? EducationInputCell,
            let eduItem = resumeContext.educations[safe: indexPath.row] {
+            eduCell.assign(view: self, section: theSection, indexPath: indexPath)
             eduCell.set(class: eduItem.class, year: eduItem.endYear, gpa: eduItem.gpa)
         }
 
         if theSection == .projects,
            let projCell = cell as? ProjectInputCell,
            let projItem = resumeContext.projects[safe: indexPath.row] {
+            projCell.assign(view: self, section: theSection, indexPath: indexPath)
             projCell.set(title: projItem.name, teamSize: projItem.teamSize, summary: projItem.summary, techUsed: projItem.techUsed, role: projItem.role)
         }
 
