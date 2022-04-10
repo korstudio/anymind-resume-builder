@@ -38,26 +38,26 @@ class BaseInputCell: UITableViewCell {
 
     func subscribe(input: UITextField, next: @escaping (String) -> Void) {
         input.rx.text
-                .subscribe { event in
-                    switch event {
-                    case let .next(text):
-                        next(text ?? "")
-                    default: break
-                    }
+            .subscribe { event in
+                switch event {
+                case let .next(text):
+                    next(text ?? "")
+                default: break
                 }
-                .disposed(by: disposeBag)
+            }
+            .disposed(by: disposeBag)
     }
 
     func subscribe(input: UITextView, next: @escaping (String) -> Void) {
         input.rx.text
-                .subscribe { event in
-                    switch event {
-                    case let .next(text):
-                        next(text ?? "")
-                    default: break
-                    }
+            .subscribe { event in
+                switch event {
+                case let .next(text):
+                    next(text ?? "")
+                default: break
                 }
-                .disposed(by: disposeBag)
+            }
+            .disposed(by: disposeBag)
     }
 
     func observeValue(in view: BuilderDisplayLogic) {
