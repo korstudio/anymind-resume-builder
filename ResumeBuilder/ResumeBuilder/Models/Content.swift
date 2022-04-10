@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias FieldMap = [Field: String]
+
 enum Content {
     struct WorkSummaryItem {
         var companyName = ""
@@ -57,5 +59,11 @@ enum Field {
 struct DisplayValue {
     var section: Builder.Section = .info
     var index: Int = 0
-    var content: [Field: String] = [:]
+    var content: FieldMap = [:]
+}
+
+extension FieldMap {
+    func get(_ field: Field) -> String {
+        self[field] ?? ""
+    }
 }
