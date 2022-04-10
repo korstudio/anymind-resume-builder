@@ -108,6 +108,91 @@ enum Builder {
         var skills = [Content.SkillItem]()
         var educations = [Content.EducationItem]()
         var projects = [Content.ProjectItem]()
+        
+        subscript<T>(_ section: Section, at index: Int = 0) -> T? {
+            get {
+                switch section {
+                case .photo:
+                    let data = photoData ?? "".data(using: .utf8)!
+                    return UIImage(data: data) as? T
+                case .info where index == 0, .mobile:
+                    return mobile as? T
+                case .info where index == 1, .email:
+                    return email as? T
+                case .info where index == 2, .address:
+                    return address as? T
+                case .career:
+                    return careerObj as? T
+                case .yearsExp:
+                    return years as? T
+                case .works:
+                    return works[safe: index] as? T
+                case .skills:
+                    return skills[safe: index] as? T
+                case .educations:
+                    return educations[safe: index] as? T
+                case .projects:
+                    return projects[safe: index] as? T
+                default:
+                    return "" as? T
+                }
+            }
+            
+            set {
+                switch section {
+                case .photo:
+                    guard let content = (newValue as? Data) else { return }
+                    photoData = content
+                case .info where index == 0, .mobile:
+                    guard let content = (newValue as? FieldMap) else { return }
+                    mobile = content.get(.mobile)
+                case .info where index == 1, .email:
+                    guard let content = (newValue as? FieldMap) else { return }
+                    email = content.get(.email)
+                case .info where index == 2, .address:
+                    guard let content = (newValue as? FieldMap) else { return }
+                    address = content.get(.address)
+                case .career:
+                    guard let content = (newValue as? FieldMap) else { return }
+                    careerObj = content.get(.career)
+                case .yearsExp:
+                    guard let content = (newValue as? FieldMap) else { return }
+                    years = content.get(.yearExp)
+                case .works:
+                    guard var item = works[safe: index],
+                          let content = (newValue as? FieldMap)
+                    else { return }
+                    item.companyName = content.get(.companyName)
+                    item.duration = content.get(.duration)
+                case .skills:
+                    guard var item = skills[safe: index],
+                          let content = (newValue as? FieldMap)
+                    else { return }
+                    item.title = content.get(.skill)
+                case .educations:
+                    guard var item = educations[safe: index],
+                          let content = (newValue as? FieldMap)
+                    else { return }
+                    item.`class` = content.get(.class)
+                    item.endYear = content.get(.endYear)
+                    item.gpa = content.get(.gpa)
+                case .projects:
+                    guard var item = projects[safe: index],
+                          let content = (newValue as? FieldMap)
+                    else { return }
+                    item.name = content.get(.project)
+                    item.teamSize = content.get(.teamSize)
+                    item.summary = content.get(.summary)
+                    item.techUsed = content.get(.tech)
+                    item.role = content.get(.role)
+                default: break
+                }
+            }
+        }
+        
+        private func toString<T>(_ value: T?) -> String {
+            (value as? String) ?? ""
+        }
     }
 
     enum RenderTable {
