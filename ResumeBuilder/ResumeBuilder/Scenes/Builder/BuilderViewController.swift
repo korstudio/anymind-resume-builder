@@ -137,15 +137,15 @@ extension BuilderViewController {
             case 0:
                 let textCell = cell as? TextFieldCell
                 textCell?.assign(view: self, section: theSection, indexPath: indexPath)
-                textCell?.set(title: Builder.Section.mobile.title, text: resumeContext.mobile)
+                textCell?.set(title: Builder.Section.mobile.cells.title, text: resumeContext.mobile)
             case 1:
                 let textCell = cell as? TextFieldCell
                 textCell?.assign(view: self, section: theSection, indexPath: indexPath)
-                textCell?.set(title: Builder.Section.email.title, text: resumeContext.email)
+                textCell?.set(title: Builder.Section.email.cells.title, text: resumeContext.email)
             case 2:
                 let textViewCell = cell as? TextViewCell
                 textViewCell?.assign(view: self, section: theSection, indexPath: indexPath)
-                textViewCell?.set(title: Builder.Section.address.title, text: resumeContext.address)
+                textViewCell?.set(title: Builder.Section.address.cells.title, text: resumeContext.address)
             default: break
             }
         }
@@ -216,7 +216,8 @@ extension BuilderViewController {
     }
 
     public override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        sections[section].title
+        if section == 0 { return nil }
+        return sections[section].title
     }
 
     private func getCellType(at indexPath: IndexPath) -> UITableViewCell.Type {
@@ -225,7 +226,7 @@ extension BuilderViewController {
         switch section {
         case .photo:
             cellType = ImageCell.self
-        case .address:
+        case .info where indexPath.row == 2:
             cellType = TextViewCell.self
         case .works:
             if isLast(indexPath.row, of: .works) {
