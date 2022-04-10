@@ -10,6 +10,7 @@ import UIKit
 
 protocol BuilderPresentationLogic {
     func presentSelectedResume(response: Builder.GetResume.Response)
+    func presentSaveComplete(response: Builder.Save.Response)
 }
 
 class BuilderPresenter: BuilderPresentationLogic {
@@ -43,5 +44,9 @@ class BuilderPresenter: BuilderPresentationLogic {
         }
 
         viewController?.displayResume(viewModel: .init(sections: response.sections, context: context))
+    }
+    
+    func presentSaveComplete(response: Builder.Save.Response) {
+        viewController?.displaySaveCompleted(viewModel: .init(hasError: response.hasError))
     }
 }

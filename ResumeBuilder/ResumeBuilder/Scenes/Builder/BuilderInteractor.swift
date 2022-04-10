@@ -57,7 +57,10 @@ class BuilderInteractor: BuilderBusinessLogic, BuilderDataStore {
         
         guard let realm = try? Realm(),
               let resume = selectedResume
-        else { return }
+        else {
+            presenter?.presentSaveComplete(response: .init(hasError: true))
+            return
+        }
         
         let totalResumes = realm.objects(Resume.self).count
         let context = request.context
@@ -120,6 +123,10 @@ class BuilderInteractor: BuilderBusinessLogic, BuilderDataStore {
         
         try! realm.write {
             realm.add(resume, update: .modified)
+            
+            DispatchQueue.main.async { [weak self] in
+                self?.presenter?.presentSaveComplete(response: .init(hasError: false))
+            }
         }
     }
 }

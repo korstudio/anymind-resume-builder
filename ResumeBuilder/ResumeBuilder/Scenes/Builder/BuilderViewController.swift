@@ -9,9 +9,11 @@
 import UIKit
 import Gallery
 import CropViewController
+import Toast_Swift
 
 protocol BuilderDisplayLogic: AnyObject {
     func displayResume(viewModel: Builder.GetResume.ViewModel)
+    func displaySaveCompleted(viewModel: Builder.Save.ViewModel)
     func updateValue(with value: DisplayValue)
 }
 
@@ -69,6 +71,9 @@ class BuilderViewController: UITableViewController {
         galleryCtrl.delegate = self
         Gallery.Config.tabsToShow = [.imageTab, .cameraTab]
         Gallery.Config.initialTab = .imageTab
+        Gallery.Config.Camera.imageLimit = 1
+        
+        ToastManager.shared.isTapToDismissEnabled = true
 
         Style.applyNavStyles(of: navigationController, color: .blue)
         interactor?.getResumeAndDisplay(request: .init())
@@ -92,6 +97,22 @@ extension BuilderViewController: BuilderDisplayLogic {
         sections = viewModel.sections
         resumeContext = viewModel.context
         tableView.reloadData()
+    }
+    
+    func displaySaveCompleted(viewModel: Builder.Save.ViewModel) {
+        var style = ToastStyle()
+        style.cornerRadius = 16
+        style.shadowColor = .clear
+        style.displayShadow = false
+        style.backgroundColor = viewModel.hasError ? .error : .appGreen
+        style.titleFont = Style.Font.museoRoundedBlack(16).font
+        style.messageFont = Style.Font.museoRoundedBold(16).font
+        style.titleColor = .white
+        style.messageColor = .white
+        style.titleAlignment = .center
+        style.messageAlignment = .center
+        
+        view.makeToast(viewModel.hasError ? "Save error" : "Save successful", duration: 2, position: .top, style: style)
     }
 
     func updateValue(with value: DisplayValue) {
