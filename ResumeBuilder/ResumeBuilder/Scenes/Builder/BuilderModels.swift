@@ -215,4 +215,18 @@ enum Builder {
             let context: ResumeContext
         }
     }
+    
+    enum Save {
+        struct Request {
+            let context: ResumeContext
+        }
+        
+        struct Response {
+            let hasError: Bool
+        }
+        
+        struct ViewModel {
+            let hasError: Bool
+        }
+    }
 }
