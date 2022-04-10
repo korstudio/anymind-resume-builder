@@ -25,8 +25,4 @@ extension String {
     func getImage() -> UIImage? {
         UIImage(named: self)
     }
-    
-    func orEmpty() -> String {
-        return ""
-    }
 }

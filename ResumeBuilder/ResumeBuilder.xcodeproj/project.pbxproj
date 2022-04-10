@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1151F2A0280299C200673162 /* OptionalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1151F29F280299C200673162 /* OptionalExtension.swift */; };
 		1173135927E87880002D2F17 /* ResumeListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173135327E87880002D2F17 /* ResumeListPresenter.swift */; };
 		1173135A27E87880002D2F17 /* ResumeListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173135427E87880002D2F17 /* ResumeListWorker.swift */; };
 		1173135B27E87880002D2F17 /* ResumeListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173135527E87880002D2F17 /* ResumeListRouter.swift */; };
@@ -74,7 +73,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1151F29F280299C200673162 /* OptionalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalExtension.swift; sourceTree = "<group>"; };
 		1173135327E87880002D2F17 /* ResumeListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeListPresenter.swift; sourceTree = "<group>"; };
 		1173135427E87880002D2F17 /* ResumeListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeListWorker.swift; sourceTree = "<group>"; };
 		1173135527E87880002D2F17 /* ResumeListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeListRouter.swift; sourceTree = "<group>"; };
@@ -279,7 +277,6 @@
 				5C99EDBE743B65361001737A /* ArrayExtension.swift */,
 				11FE20DF27F86D6000EEBFE2 /* ColorExtension.swift */,
 				11FE20ED27F8E24300EEBFE2 /* ViewExtension.swift */,
-				1151F29F280299C200673162 /* OptionalExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -633,7 +630,6 @@
 				1173137727E87EC1002D2F17 /* TextViewCell.swift in Sources */,
 				1173136D27E87CB5002D2F17 /* BuilderRouter.swift in Sources */,
 				1173136C27E87CB5002D2F17 /* BuilderWorker.swift in Sources */,
-				1151F2A0280299C200673162 /* OptionalExtension.swift in Sources */,
 				1173135B27E87880002D2F17 /* ResumeListRouter.swift in Sources */,
 				1173137527E87D0F002D2F17 /* TextFieldCell.swift in Sources */,
 				1173137D27E87F1F002D2F17 /* EducationInputCell.swift in Sources */,
