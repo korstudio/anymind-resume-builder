@@ -17,6 +17,7 @@ protocol BuilderBusinessLogic {
 protocol BuilderDataStore {
     var sections: [Builder.Section] { get }
     var selectedResumeId: ObjectId? { get set }
+    var selectedResume: Resume? { get set }
 }
 
 class BuilderInteractor: BuilderBusinessLogic, BuilderDataStore {
@@ -55,14 +56,14 @@ class BuilderInteractor: BuilderBusinessLogic, BuilderDataStore {
             selectedResume = Resume()
         }
         
-        guard let realm = try? Realm(),
-              let resume = selectedResume
+        guard
+            let realm = try? Realm(),
+            let resume = selectedResume
         else {
             presenter?.presentSaveComplete(response: .init(hasError: true))
             return
         }
         
-        let totalResumes = realm.objects(Resume.self).count
         let context = request.context
         
         let info = PersonalInfo()
@@ -112,16 +113,18 @@ class BuilderInteractor: BuilderBusinessLogic, BuilderDataStore {
             return $0
         }
         
-        resume.title = "Resume #\(totalResumes)"
-        resume.info = info
-        resume.careerObjective = context.careerObj
-        resume.yearsExp = context.years
-        resume.works = works
-        resume.skills = skills
-        resume.educations = educations
-        resume.projects = projects
-        
         try! realm.write {
+            let totalResumes = realm.objects(Resume.self).count
+            
+            resume.title = "Resume #\(totalResumes)"
+            resume.info = info
+            resume.careerObjective = context.careerObj
+            resume.yearsExp = context.years
+            resume.works = works
+            resume.skills = skills
+            resume.educations = educations
+            resume.projects = projects
+            
             realm.add(resume, update: .modified)
             
             DispatchQueue.main.async { [weak self] in
