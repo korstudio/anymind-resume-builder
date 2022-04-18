@@ -93,8 +93,7 @@ class BuilderViewController: UITableViewController {
     }
     
     @IBAction func onSave(_ sender: UIBarButtonItem) {
-        // TODO: implement this
-        dismiss(animated: true)
+        interactor?.save(request: .init(context: resumeContext))
     }
 }
 
@@ -384,6 +383,7 @@ extension BuilderViewController: GalleryControllerDelegate {
 extension BuilderViewController: CropViewControllerDelegate {
     public func cropViewController(_ cropViewController: CropViewController, didCropToImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
         resumeContext[.photo] = image.pngData()
+        cropViewController.dismiss(animated: true)
         tableView.reloadData()
     }
 }
