@@ -62,12 +62,12 @@ class ResumeListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        interactor?.loadSavedResume()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         Style.applyNavStyles(of: navigationController, color: .yellow)
+        interactor?.loadSavedResume()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -87,7 +87,31 @@ extension ResumeListViewController: ResumeListDisplayLogic {
 }
 
 extension ResumeListViewController {
-//    public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        super.tableView(tableView, cellForRowAt: indexPath)
-//    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        resumeList.count
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        1
+    }
+    
+    public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let tableCell = tableView.dequeueReusableCell(withIdentifier: String(type: ResumeItemCell.self), for: indexPath)
+        
+        if let cell = tableCell as? ResumeItemCell,
+            let resumeItem = resumeList[safe: indexPath.row] {
+            cell.set(title: resumeItem.title, date: resumeItem.date)
+        }
+        
+        return tableCell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        60
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let resume = resumeList[safe: indexPath.row] else { return }
+        router?.routeToBuilder(with: resume)
+    }
 }

@@ -18,8 +18,15 @@ class ResumeItemCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
+    func set(title: String, date: Date) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "d MMM yyyy"
+        
+        let formattedDate = formatter.string(from: date)
+        
+        titleLabel.text = title
+        dateLabel.text = formattedDate
+    }
 }
