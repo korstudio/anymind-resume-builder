@@ -8,8 +8,8 @@
 3. Execute `pod install`
 
 ## Features
-✅ Using Clean Swift
-✅ Locally store resume
-✅ Save/Edit resume
-✅ Select and crop image
-⬜️ Form validation
+- ✅ Using Clean Swift
+- ✅ Locally store resume
+- ✅ Save/Edit resume
+- ✅ Select and crop image
+- ⬜️ Form validation
