@@ -10,6 +10,7 @@ import UIKit
 
 protocol ResumeListRoutingLogic {
     func routeToBuilder()
+    func routeToBuilder(with resume: ResumeList.ResumeContext)
 }
 
 protocol ResumeListDataPassing {
@@ -24,9 +25,17 @@ class ResumeListRouter: NSObject, ResumeListRoutingLogic, ResumeListDataPassing 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let navVC = storyboard.instantiateViewController(withIdentifier: "BuilderViewController")
         viewController?.push(navVC)
-//        if #available(iOS 13, *) {
-//            navVC.isModalInPresentation = true
-//        }
-//        viewController?.present(navVC, animated: true)
+    }
+    
+    func routeToBuilder(with resume: ResumeList.ResumeContext) {
+        guard let builder = BuilderViewController.create(),
+              var ds = builder.router?.dataStore
+        else { return }
+        passDataToBuilder(resume: resume, dataStore: &ds)
+        viewController?.push(builder)
+    }
+    
+    private func passDataToBuilder(resume: ResumeList.ResumeContext, dataStore: inout BuilderDataStore) {
+        dataStore.selectedResumeId = resume.id
     }
 }

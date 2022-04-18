@@ -37,6 +37,12 @@ class BuilderViewController: UITableViewController {
         super.init(coder: aDecoder)
         setup()
     }
+    
+    static func create() -> BuilderViewController? {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "BuilderViewController") as? BuilderViewController
+        return vc
+    }
 
     // MARK: Setup
 
